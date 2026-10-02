@@ -19,14 +19,13 @@ Landing page professionale, moderna, conversion-oriented ed elegante per **Elett
 ├── memory.md                   # Stato e architettura del progetto (Memoria permanente)
 ├── README.md                   # Documentazione di progetto
 ├── css/
-│   └── style.css               # Design system: Navy (#0a0e17), Antracite (#111827) e Accento Ambra (#ffbe0b)
+│   └── style.css               # Design system: Navy (#0a0e17), Antracite (#111827), Accento Ambra (#ffbe0b)
+│                               # + Sfondo fisso con gradiente (site-bg.jpg)
 ├── js/
 │   └── main.js                 # Logica ES6+, IntersectionObserver, demo domotica, form AJAX, cookie consent
 ├── favicon/
 │   └── favicon.svg             # Favicon vettoriale brand
 └── assets/
-    ├── videos/
-    │   └── hero-electrical-tech.mp4 # Video MP4 loop per l'Hero visual
     ├── logos/                  # Loghi vettoriali SVG watermark per background card marchi
     │   ├── bticino.svg
     │   ├── schneider.svg
@@ -37,7 +36,9 @@ Landing page professionale, moderna, conversion-oriented ed elegante per **Elett
     │   ├── dahua.svg
     │   └── hikvision.svg
     └── images/
-        ├── hero-real.jpg       # Fotografia HD / Poster fallback Hero
+        ├── site-bg.jpg         # Immagine di sfondo fissa (circuito tecnologico elegante su pietra scura)
+        ├── hero-animated-circuit.svg # Animazione 60fps quadro elettrico, flusso trifase e telemetria
+        ├── hero-real.jpg       # Fotografia HD sala quadri industriali
         ├── solution-casa.jpg   # Foto Soluzione Casa / Residenziale
         ├── solution-commercial.jpg # Foto Soluzione Attività Commerciali
         ├── solution-industria.jpg  # Foto Soluzione Industria & Stabilimenti
@@ -52,25 +53,19 @@ Landing page professionale, moderna, conversion-oriented ed elegante per **Elett
 ```
 
 ## Componenti & Funzionalità Chiave
-1. **Hero con Video Tecnologico Loop**:
-   - Tag `<video autoplay muted loop playsinline>` con fallback poster fotografico e overlay scuro.
-2. **Immagini Fotografiche Tematiche Conformi EU AI Act (Regolamento UE 2024/1689)**:
-   - 8 Card Servizi + 3 Sezioni Soluzioni (Casa, Commercio, Industria) + Hero, tutte con tag `alt` chiari e menzione di trasparenza.
-3. **Sezione I Nostri Marchi con Loghi in Background (Watermark)**:
-   - BTicino, Schneider Electric, ABB, Vimar, Gewiss, Ksenia Security, Dahua Technology, Hikvision.
-   - Loghi SVG dinamici che si illuminano e scalano all'hover della card.
-4. **Social Ufficiali Integrati nel Footer**:
-   - Icone SVG native di Facebook, Instagram e TikTok con effetti hover ed etichette `aria-label`.
-5. **Mobile First & Responsive Design**:
-   - Barra fissa inferiore (`.mobile-sticky-bar`) visibile solo su smartphone (Chiama, WhatsApp, Preventivo).
-   - Menu drawer con supporto accessibilità tastiera.
-6. **Form Contatti Sicuro & Antispam**:
-   - Validazione client e server-side, protezione Honeypot, Rate Limiting in sessione PHP.
-7. **SEO & Dati Strutturati**:
-   - JSON-LD con `Electrician`, `LocalBusiness`, `Service` e `WebSite`.
-
-## Placeholder Configurabili
-- Informazioni aziendali: `CITY`, `PROVINCE`, `REGION`, `ADDRESS`, `SERVICE_AREA`
-- Contatti: `CONTACT_PHONE`, `CONTACT_EMAIL`, `CONTACT_WHATSAPP`
-- Social: `PAGINA_FACEBOOK`, `PROFILO_INSTAGRAM`, `PROFILO_TIKTOK`
-- Dati legali e web: `DOMINIO.IT`, `[INSERIRE_PARTITA_IVA]`, metriche `[XX]+`
+1. **Sfondo Fisso con Gradiente (`site-bg.jpg`)**:
+   - `background-attachment: fixed`, `background-size: cover` combinato con un triplo gradiente navy/antracite (`rgba(10, 14, 23, 0.94)`) per garantire massima leggibilità dei testi e profondità visiva premium.
+2. **Hero con Animazione Tecnica a Tema Impianti Elettrici**:
+   - Animazione fluida (60fps) vettoriale di un quadro elettrico industriale certificato: linee di potenza trifase (L1, L2, L3) con impulsi di corrente animati, LED di stato lampeggianti, display multimetro con telemetria a 230V/50Hz e barra di carico dinamica.
+3. **Immagini Fotografiche Tematiche Conformi EU AI Act (Regolamento UE 2024/1689)**:
+   - 8 Card Servizi + 3 Sezioni Soluzioni (Casa, Commercio, Industria), tutte con tag `alt` chiari e menzione di trasparenza.
+4. **Sezione I Nostri Marchi con Loghi in Background (Watermark)**:
+   - BTicino, Schneider Electric, ABB, Vimar, Gewiss, Ksenia Security, Dahua Technology, Hikvision con effetto hover luminoso.
+5. **Social Ufficiali Integrati nel Footer**:
+   - Icone SVG native di Facebook, Instagram e TikTok.
+6. **Mobile First & Responsive Design**:
+   - Barra fissa inferiore per smartphone (Chiama, WhatsApp, Preventivo).
+7. **Form Contatti Sicuro & Antispam**:
+   - Validazione client/server, Honeypot e Rate Limiting PHP.
+8. **SEO & Dati Strutturati**:
+   - JSON-LD Schema.org completo.
