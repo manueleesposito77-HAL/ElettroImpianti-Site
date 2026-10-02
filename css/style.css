@@ -1102,6 +1102,71 @@ input, button, select, textarea {
 }
 
 /* --------------------------------------------------------------------------
+   Brands / Partner Section
+   -------------------------------------------------------------------------- */
+.brands-section {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.brand-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-4px);
+  background: var(--color-bg-surface-elevated);
+  box-shadow: var(--shadow-card);
+}
+
+.brand-badge-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  border: 1px solid rgba(255, 190, 11, 0.25);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.brand-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
    12. Workflow Process (Timeline 4 Fasi)
    -------------------------------------------------------------------------- */
 .process-timeline {
