@@ -122,13 +122,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const newState = isCurrentlyOn ? 'off' : 'on';
       sw.setAttribute('data-state', newState);
 
-      // Aggiornamento descrizioni contestuali
-      if (sw.id === 'switchLight' && lightDesc) {
-        lightDesc.textContent = newState === 'on' ? 'Luci calde al 40% (Attivo)' : 'Luci spente (Standby)';
-      } else if (sw.id === 'switchClimate' && climateDesc) {
-        climateDesc.textContent = newState === 'on' ? 'Climatizzazione costante a 20.5°C' : 'Termostato spento';
-      } else if (sw.id === 'switchBlinds' && blindsDesc) {
-        blindsDesc.textContent = newState === 'on' ? 'Chiusura programmata al tramonto' : 'Controllo manuale';
+      // Aggiornamento visivo diretto sull'appartamento
+      const roomView = document.getElementById('smartRoomView');
+      const roomClimateBadge = document.getElementById('roomClimateBadge');
+      const roomBlindsBadge = document.getElementById('roomBlindsBadge');
+
+      if (sw.id === 'switchLight') {
+        if (roomView) roomView.setAttribute('data-light', newState);
+        if (lightDesc) lightDesc.textContent = newState === 'on' ? 'Luci calde al 40% (Attivo)' : 'Luci spente (Standby)';
+      } else if (sw.id === 'switchClimate') {
+        if (roomView) roomView.setAttribute('data-climate', newState);
+        if (climateDesc) climateDesc.textContent = newState === 'on' ? 'Climatizzazione costante a 20.5°C' : 'Termostato spento';
+        if (roomClimateBadge) roomClimateBadge.style.opacity = newState === 'on' ? '1' : '0';
+      } else if (sw.id === 'switchBlinds') {
+        if (roomView) roomView.setAttribute('data-blinds', newState);
+        if (blindsDesc) blindsDesc.textContent = newState === 'on' ? 'Chiusura programmata al tramonto' : 'Controllo manuale';
+        if (roomBlindsBadge) roomBlindsBadge.textContent = newState === 'on' ? '🪟 Schermature: Automatiche' : '🪟 Schermature: Manuali';
       }
 
       updatePowerTelemetry();

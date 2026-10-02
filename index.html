@@ -612,8 +612,32 @@
           <a href="#contatti" class="btn btn-primary">Richiedi una consulenza domotica</a>
         </div>
 
-        <!-- Dashboard Interattiva dimostrativa -->
+        <!-- Dashboard Interattiva dimostrativa con Vista Appartamento Reattiva -->
         <div class="domotics-interactive-panel reveal-fade-up" aria-label="Simulatore controllo domotico">
+          
+          <!-- Vista Appartamento che cambia in tempo reale -->
+          <div class="smart-room-view" id="smartRoomView" data-light="on" data-climate="on" data-blinds="on">
+            <img 
+              src="assets/images/solution-casa.jpg" 
+              alt="Living appartamento moderno con illuminazione domotica e termoregolazione" 
+              class="smart-room-img" 
+              id="smartRoomImg"
+              loading="lazy"
+              width="600"
+              height="338"
+            />
+            <!-- Bagliore dinamico illuminazione scenario -->
+            <div class="room-overlay-light" id="roomLightGlow"></div>
+            <!-- Badge telemetria termoregolazione live -->
+            <div class="room-overlay-climate" id="roomClimateBadge">
+              <span style="font-size: 0.9rem;">❄️</span> Termostato Attivo • 20.5°C
+            </div>
+            <!-- Badge stato infissi -->
+            <div class="room-overlay-blinds" id="roomBlindsBadge">
+              🪟 Schermature: Automatiche
+            </div>
+          </div>
+
           <div class="smart-dashboard-header">
             <div>
               <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Smart Hub Elettro Impianti</h3>
