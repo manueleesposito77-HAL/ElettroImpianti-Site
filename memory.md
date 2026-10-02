@@ -1,25 +1,76 @@
 # Memoria Progetto: Elettro Impianti Landing Page
 
 ## Descrizione
-Landing page professionale, moderna, conversion-oriented ed elegante per **Elettro Impianti**, azienda italiana operante nel settore impiantistico civile e industriale, domotica, videosorveglianza, allarme e automazioni.
+Landing page professionale, moderna, conversion-oriented ed elegante per **Elettro Impianti**, azienda italiana operante nel settore impiantistico civile e industriale, domotica smart living, videosorveglianza CCTV, allarmi antintrusione e automazioni.
 
 ## Repository Remoto
-- **Nome Repository**: `ElettroImpianti-Site`
-- **Piattaforma**: GitHub (`manueleesposito77-HAL`)
+- **URL GitHub**: [https://github.com/manueleesposito77-HAL/ElettroImpianti-Site](https://github.com/manueleesposito77-HAL/ElettroImpianti-Site)
+- **Account**: `manueleesposito77-HAL`
+- **Ramo Principale**: `main`
 - **Visibilità**: Pubblico
 
 ## Architettura e Struttura File
-- `/index.html`: Landing page HTML5 semantica, singolo `<h1>`, schema.org JSON-LD (Electrician, Service, WebSite), accessibilità WCAG 2.1 e supporto `prefers-reduced-motion`.
-- `/css/style.css`: Design system completo basato su CSS Custom Properties, palette navy profonda (`#0a0e17`) con accenti ambra/arancio caldo (`#ffbe0b`), layout a griglia/flexbox, animazioni sobrie.
-- `/js/main.js`: Gestione menu mobile, header dinamico, interruttori domotici dimostrativi, validazione form asincrona, antispam e banner cookie GDPR.
-- `/contact.php`: Script backend sicuro per gestione invio preventivi con sanitizzazione, protezione Honeypot, CSRF/Rate Limiting e risposta JSON.
-- `/robots.txt`: Regole di indicizzazione e puntamento a sitemap.
-- `/sitemap.xml`: Mappa del sito per motori di ricerca.
-- `/favicon/favicon.svg`: Icona vettoriale coordinata col brand.
-- `/assets/images/`: Grafiche vettoriali responsive ad alta risoluzione (hero, residenziale, commerciale, industriale).
+```
+/Site-ElettroImpianti/
+├── index.html                  # Landing page HTML5 semantica, SEO, Schema.org, WCAG 2.1
+├── contact.php                 # Backend PHP sicuro con sanitizzazione, Honeypot e Rate Limiting
+├── robots.txt                  # Regole crawler per motori di ricerca
+├── sitemap.xml                 # Mappa XML per indicizzazione
+├── memory.md                   # Stato e architettura del progetto (Memoria permanente)
+├── README.md                   # Documentazione di progetto
+├── css/
+│   └── style.css               # Design system: Navy (#0a0e17), Antracite (#111827) e Accento Ambra (#ffbe0b)
+├── js/
+│   └── main.js                 # Logica ES6+, IntersectionObserver, demo domotica, form AJAX, cookie consent
+├── favicon/
+│   └── favicon.svg             # Favicon vettoriale brand
+└── assets/
+    ├── videos/
+    │   └── hero-electrical-tech.mp4 # Video MP4 loop per l'Hero visual
+    ├── logos/                  # Loghi vettoriali SVG watermark per background card marchi
+    │   ├── bticino.svg
+    │   ├── schneider.svg
+    │   ├── abb.svg
+    │   ├── vimar.svg
+    │   ├── gewiss.svg
+    │   ├── ksenia.svg
+    │   ├── dahua.svg
+    │   └── hikvision.svg
+    └── images/
+        ├── hero-real.jpg       # Fotografia HD / Poster fallback Hero
+        ├── solution-casa.jpg   # Foto Soluzione Casa / Residenziale
+        ├── solution-commercial.jpg # Foto Soluzione Attività Commerciali
+        ├── solution-industria.jpg  # Foto Soluzione Industria & Stabilimenti
+        ├── card-civile.jpg     # Card Impianti Civili
+        ├── card-industriale.jpg # Card Impianti Industriali
+        ├── card-domotica.jpg   # Card Domotica Smart Home
+        ├── card-allarme.jpg    # Card Impianti di Allarme
+        ├── card-cctv.jpg       # Card Videosorveglianza CCTV
+        ├── card-automazione.jpg # Card Automazione Cancelli
+        ├── card-manutenzione.jpg # Card Manutenzione e Diagnosi
+        └── card-adeguamento.jpg # Card Adeguamento e Messa a Norma
+```
 
-## Placeholder Configurabili (Local SEO & Azienda)
-- `CITY`, `PROVINCE`, `REGION`, `ADDRESS`, `SERVICE_AREA`
-- `CONTACT_PHONE`, `CONTACT_EMAIL`, `CONTACT_WHATSAPP`
-- `DOMINIO.IT`, `[INSERIRE_PARTITA_IVA]`
-- Metriche: `[XX]+`
+## Componenti & Funzionalità Chiave
+1. **Hero con Video Tecnologico Loop**:
+   - Tag `<video autoplay muted loop playsinline>` con fallback poster fotografico e overlay scuro.
+2. **Immagini Fotografiche Tematiche Conformi EU AI Act (Regolamento UE 2024/1689)**:
+   - 8 Card Servizi + 3 Sezioni Soluzioni (Casa, Commercio, Industria) + Hero, tutte con tag `alt` chiari e menzione di trasparenza.
+3. **Sezione I Nostri Marchi con Loghi in Background (Watermark)**:
+   - BTicino, Schneider Electric, ABB, Vimar, Gewiss, Ksenia Security, Dahua Technology, Hikvision.
+   - Loghi SVG dinamici che si illuminano e scalano all'hover della card.
+4. **Social Ufficiali Integrati nel Footer**:
+   - Icone SVG native di Facebook, Instagram e TikTok con effetti hover ed etichette `aria-label`.
+5. **Mobile First & Responsive Design**:
+   - Barra fissa inferiore (`.mobile-sticky-bar`) visibile solo su smartphone (Chiama, WhatsApp, Preventivo).
+   - Menu drawer con supporto accessibilità tastiera.
+6. **Form Contatti Sicuro & Antispam**:
+   - Validazione client e server-side, protezione Honeypot, Rate Limiting in sessione PHP.
+7. **SEO & Dati Strutturati**:
+   - JSON-LD con `Electrician`, `LocalBusiness`, `Service` e `WebSite`.
+
+## Placeholder Configurabili
+- Informazioni aziendali: `CITY`, `PROVINCE`, `REGION`, `ADDRESS`, `SERVICE_AREA`
+- Contatti: `CONTACT_PHONE`, `CONTACT_EMAIL`, `CONTACT_WHATSAPP`
+- Social: `PAGINA_FACEBOOK`, `PROFILO_INSTAGRAM`, `PROFILO_TIKTOK`
+- Dati legali e web: `DOMINIO.IT`, `[INSERIRE_PARTITA_IVA]`, metriche `[XX]+`
