@@ -217,18 +217,31 @@
           </div>
         </div>
 
-        <!-- Visual Hero: Fotografia Professionale Sala Quadri Elettrici -->
+        <!-- Visual Hero: Video Loop Tecnologico Elettrico con Fallback Fotografico -->
         <div class="hero-visual-card">
           <div class="hero-media-wrapper">
             <div class="hero-image-box">
-              <img 
-                src="assets/images/hero-real.jpg" 
-                alt="Centrale di distribuzione elettrica industriale con quadri a norma CEI 64-8 - Elettro Impianti (Immagine illustrativa generata con IA)"
-                class="hero-image-placeholder"
-                width="800" 
-                height="450"
-                fetchpriority="high"
-              />
+              <video 
+                class="hero-video-element" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                preload="metadata"
+                poster="assets/images/hero-real.jpg"
+                aria-label="Animazione tecnologica impianti elettrici e automazione industriale"
+              >
+                <source src="assets/videos/hero-electrical-tech.mp4" type="video/mp4" />
+                <!-- Fallback se il browser non supporta il tag video -->
+                <img 
+                  src="assets/images/hero-real.jpg" 
+                  alt="Centrale di distribuzione elettrica industriale con quadri a norma CEI 64-8 - Elettro Impianti (Immagine illustrativa generata con IA)"
+                  class="hero-image-placeholder"
+                  width="800" 
+                  height="450"
+                />
+              </video>
+              <div class="hero-video-overlay" aria-hidden="true"></div>
             </div>
             <!-- Badge Overlay Tecnologico -->
             <div class="hero-tech-badge-overlay">
@@ -807,58 +820,82 @@
         <div class="brands-grid">
           <!-- 1. BTicino -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Serie Civile & Smart</span>
-            <div class="brand-name">BTicino</div>
-            <p class="brand-desc">Serie civili di design, quadri salvavita, videocitofonia e sistemi domotici integrati.</p>
+            <img src="assets/logos/bticino.svg" alt="BTicino Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Serie Civile & Smart</span>
+              <div class="brand-name">BTicino</div>
+              <p class="brand-desc">Serie civili di design, quadri salvavita, videocitofonia e sistemi domotici integrati.</p>
+            </div>
           </div>
 
           <!-- 2. Schneider Electric -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Distribuzione BT/MT</span>
-            <div class="brand-name">Schneider Electric</div>
-            <p class="brand-desc">Interruttori magnetotermici, quadri industriali e automazione energetica evoluta.</p>
+            <img src="assets/logos/schneider.svg" alt="Schneider Electric Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Distribuzione BT/MT</span>
+              <div class="brand-name">Schneider Electric</div>
+              <p class="brand-desc">Interruttori magnetotermici, quadri industriali e automazione energetica evoluta.</p>
+            </div>
           </div>
 
           <!-- 3. ABB -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Industria & Standard KNX</span>
-            <div class="brand-name">ABB</div>
-            <p class="brand-desc">Componenti di protezione industriale, potenza e moduli domotici su protocollo standard KNX.</p>
+            <img src="assets/logos/abb.svg" alt="ABB Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Industria & Standard KNX</span>
+              <div class="brand-name">ABB</div>
+              <p class="brand-desc">Componenti di protezione industriale, potenza e moduli domotici su protocollo standard KNX.</p>
+            </div>
           </div>
 
           <!-- 4. Vimar -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Design & Smart Home</span>
-            <div class="brand-name">Vimar</div>
-            <p class="brand-desc">Placche di prestigio, dispositivi connessi wireless e automazioni per ambienti residenziali.</p>
+            <img src="assets/logos/vimar.svg" alt="Vimar Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Design & Smart Home</span>
+              <div class="brand-name">Vimar</div>
+              <p class="brand-desc">Placche di prestigio, dispositivi connessi wireless e automazioni per ambienti residenziali.</p>
+            </div>
           </div>
 
           <!-- 5. Gewiss -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Infrastruttura Elettrica</span>
-            <div class="brand-name">Gewiss</div>
-            <p class="brand-desc">Quadri di cantiere, involucri stagni IP, illuminotecnica LED e canalizzazioni protette.</p>
+            <img src="assets/logos/gewiss.svg" alt="Gewiss Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Infrastruttura Elettrica</span>
+              <div class="brand-name">Gewiss</div>
+              <p class="brand-desc">Quadri di cantiere, involucri stagni IP, illuminotecnica LED e canalizzazioni protette.</p>
+            </div>
           </div>
 
           <!-- 6. Ksenia Security -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Domotica & Allarmi</span>
-            <div class="brand-name">Ksenia Security</div>
-            <p class="brand-desc">Piattaforme ibride antintrusione, domotica e controllo accessi all'avanguardia made in Italy.</p>
+            <img src="assets/logos/ksenia.svg" alt="Ksenia Security Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Domotica & Allarmi</span>
+              <div class="brand-name">Ksenia Security</div>
+              <p class="brand-desc">Piattaforme ibride antintrusione, domotica e controllo accessi all'avanguardia made in Italy.</p>
+            </div>
           </div>
 
           <!-- 7. Dahua Technology -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Videosorveglianza CCTV</span>
-            <div class="brand-name">Dahua Technology</div>
-            <p class="brand-desc">Telecamere IP professionali con algoritmi AI, termocamere e registratori NVR ridondati.</p>
+            <img src="assets/logos/dahua.svg" alt="Dahua Technology Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Videosorveglianza CCTV</span>
+              <div class="brand-name">Dahua Technology</div>
+              <p class="brand-desc">Telecamere IP professionali con algoritmi AI, termocamere e registratori NVR ridondati.</p>
+            </div>
           </div>
 
           <!-- 8. Hikvision -->
           <div class="brand-card reveal-fade-up">
-            <span class="brand-badge-tag">Sicurezza & CCTV 4K</span>
-            <div class="brand-name">Hikvision</div>
-            <p class="brand-desc">Sistemi di videosorveglianza ad altissima risoluzione, visione notturna DarkFighter e controllo varchi.</p>
+            <img src="assets/logos/hikvision.svg" alt="Hikvision Logo Watermark" class="brand-bg-logo" aria-hidden="true" loading="lazy" />
+            <div class="brand-card-content">
+              <span class="brand-badge-tag">Sicurezza & CCTV 4K</span>
+              <div class="brand-name">Hikvision</div>
+              <p class="brand-desc">Sistemi di videosorveglianza ad altissima risoluzione, visione notturna DarkFighter e controllo varchi.</p>
+            </div>
           </div>
         </div>
       </div>
