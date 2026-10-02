@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive technical assets
+Disallow: /contact.php
+
+Sitemap: https://www.DOMINIO.IT/sitemap.xml

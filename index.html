@@ -1,41 +1,172 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" dir="ltr">
 <head>
+  <!-- ----------------------------------------------------------------------
+       Elettro Impianti - Landing Page Ufficiale
+       Progettata per massime prestazioni, accessibilità e conversioni (B2C & B2B)
+       ---------------------------------------------------------------------- -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ElettroImpianti | Impianti Elettrici, Domotica e Sicurezza</title>
-  <meta name="description" content="Specialisti in impianti elettrici civili e industriali, domotica avanzata, fotovoltaico e sistemi di sicurezza certificati." />
-  
-  <!-- Google Fonts -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags Primari -->
+  <title>Elettro Impianti | Impianti Elettrici Civili e Industriali, Domotica, Sicurezza</title>
+  <meta name="description" content="Elettro Impianti realizza impianti elettrici civili e industriali certificati, domotica avanzata, impianti di allarme e videosorveglianza a CITY e PROVINCE. Richiedi un preventivo gratuito." />
+  <meta name="keywords" content="impianti elettrici civili, impianti elettrici industriali, elettricista, domotica, smart home, impianti di allarme, videosorveglianza, automazione, manutenzione impianti elettrici, adeguamento impianti" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#0a0e17" />
+  <link rel="canonical" href="https://www.DOMINIO.IT/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:url" content="https://www.DOMINIO.IT/" />
+  <meta property="og:title" content="Elettro Impianti | Impianti Elettrici, Domotica e Sistemi di Sicurezza" />
+  <meta property="og:description" content="Soluzioni tecnologiche sicure e certificate per abitazioni, attività commerciali e stabilimenti industriali. Progettazione, installazione e assistenza continua." />
+  <meta property="og:image" content="https://www.DOMINIO.IT/assets/images/hero.svg" />
+  <meta property="og:image:alt" content="Quadro elettrico e sistemi certificati Elettro Impianti" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elettro Impianti | Impianti Elettrici, Domotica e Sicurezza" />
+  <meta name="twitter:description" content="Progettazione, installazione e manutenzione di impianti elettrici e di sicurezza." />
+  <meta name="twitter:image" content="https://www.DOMINIO.IT/assets/images/hero.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+
+  <!-- Google Fonts Preconnect & Async Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Fogli di Stile -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured Data / JSON-LD Schema.org per LocalBusiness ed Elettricista -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Electrician",
+        "@id": "https://www.DOMINIO.IT/#business",
+        "name": "Elettro Impianti",
+        "url": "https://www.DOMINIO.IT/",
+        "logo": "https://www.DOMINIO.IT/favicon/favicon.svg",
+        "image": "https://www.DOMINIO.IT/assets/images/hero.svg",
+        "description": "Azienda specializzata in impianti elettrici civili e industriali, domotica smart home, impianti di allarme, videosorveglianza e automazioni.",
+        "telephone": "CONTACT_PHONE",
+        "email": "CONTACT_EMAIL",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ADDRESS",
+          "addressLocality": "CITY",
+          "addressRegion": "PROVINCE",
+          "postalCode": "00000",
+          "addressCountry": "IT"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "SERVICE_AREA"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:30"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servizi di Impiantistica Elettrica e Sicurezza",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Impianti elettrici civili",
+                "description": "Progettazione e installazione a norma CEI 64-8 con rilascio dichiarazione di conformità."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Impianti elettrici industriali",
+                "description": "Distribuzione forza motrice, quadri BT/MT e manutenzione programmata."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Domotica e Smart Home",
+                "description": "Controllo integrato di illuminazione, clima e accessi da remoto."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Impianti di allarme e videosorveglianza",
+                "description": "Sistemi antintrusione e telecamere ad alta definizione con notifica in tempo reale."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.DOMINIO.IT/#website",
+        "url": "https://www.DOMINIO.IT/",
+        "name": "Elettro Impianti",
+        "publisher": {
+          "@id": "https://www.DOMINIO.IT/#business"
+        },
+        "inLanguage": "it-IT"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header" id="mainHeader">
-    <div class="header-container">
-      <a href="#hero" class="brand-logo" id="logoLink">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">Elettro<span class="accent-text">Impianti</span></span>
+  <!-- Link accessibilità per screen reader -->
+  <a href="#mainContent" class="skip-link">Salta al contenuto principale</a>
+
+  <!-- ====================================================================
+       1. Header / Navbar Sticky
+       ==================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo Aziendale -->
+      <a href="#hero" class="brand-logo" aria-label="Elettro Impianti - Torna alla Home">
+        <div class="logo-symbol" aria-hidden="true">⚡</div>
+        <div class="logo-text-group">
+          <span class="logo-primary">ELETTRO</span>
+          <span class="logo-sub">IMPIANTI</span>
+        </div>
       </a>
 
-      <nav class="nav-menu" id="navMenu">
+      <!-- Menu Desktop -->
+      <nav class="nav-menu" id="navMenu" aria-label="Navigazione principale">
         <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#azienda" class="nav-link">Azienda</a></li>
           <li><a href="#servizi" class="nav-link">Servizi</a></li>
-          <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
-          <li><a href="#vantaggi" class="nav-link">Punti di Forza</a></li>
-          <li><a href="#progetti" class="nav-link">Realizzazioni</a></li>
-          <li><a href="#contatti" class="nav-link nav-btn-mobile">Richiedi Preventivo</a></li>
+          <li><a href="#soluzioni" class="nav-link">Soluzioni</a></li>
+          <li><a href="#perche-noi" class="nav-link">Perché noi</a></li>
+          <li><a href="#contatti" class="nav-link">Contatti</a></li>
         </ul>
       </nav>
 
-      <div class="header-cta">
-        <a href="#contatti" class="btn btn-primary" id="headerCtaBtn">Preventivo Gratuito</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu di navigazione">
+      <!-- CTA Rapida Navbar -->
+      <div class="header-cta-group">
+        <a href="#contatti" class="btn btn-primary" id="navCtaBtn">Richiedi preventivo</a>
+        <!-- Hamburger Button Mobile -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Apri menu navigazione">
           <span></span>
           <span></span>
           <span></span>
@@ -44,352 +175,881 @@
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="hero-bg-glow"></div>
-      <div class="container hero-container">
-        <div class="hero-badge">
-          <span class="badge-dot"></span> Certificazioni a Norma di Legge DM 37/08
-        </div>
-        <h1 class="hero-title">
-          Energia, Innovazione & Sicurezza per i tuoi <span class="highlight-gradient">Spazi</span>
-        </h1>
-        <p class="hero-subtitle">
-          Progettazione, installazione e manutenzione di impianti elettrici civili e industriali, automazioni domotiche, fotovoltaico e videosorveglianza all'avanguardia.
-        </p>
+  <!-- ====================================================================
+       Contenuto Principale
+       ==================================================================== -->
+  <main id="mainContent">
 
-        <div class="hero-actions">
-          <a href="#contatti" class="btn btn-primary btn-large" id="heroContactBtn">Parla con un Tecnico</a>
-          <a href="#servizi" class="btn btn-secondary btn-large" id="heroServicesBtn">Scopri i Servizi</a>
+    <!-- ==================================================================
+         2. Hero Section
+         ================================================================== -->
+    <section class="hero-section circuit-pattern" id="hero">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <!-- Testo Hero -->
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span aria-hidden="true">⚡</span> IMPIANTI ELETTRICI • DOMOTICA • SICUREZZA
+          </div>
+          <h1 class="hero-title">
+            Impianti elettrici, tecnologia e <span class="hero-title-accent">sicurezza.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Elettro Impianti realizza soluzioni elettriche e tecnologiche per abitazioni, attività commerciali e aziende. Dalla progettazione all'assistenza continua con certificazioni di legge.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contatti" class="btn btn-primary btn-large" id="heroPrimaryCta">
+              Richiedi un preventivo
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#servizi" class="btn btn-secondary btn-large" id="heroSecondaryCta">
+              Scopri i nostri servizi
+            </a>
+          </div>
+
+          <div class="hero-trust-badge">
+            <svg class="trust-check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>Soluzioni progettate per durare nel tempo. Conformità DM 37/08 e norme CEI.</span>
+          </div>
         </div>
 
-        <!-- Metric counters -->
-        <div class="hero-stats">
-          <div class="stat-card">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Anni di Esperienza</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-card">
-            <span class="stat-number">1200+</span>
-            <span class="stat-label">Interventi Completati</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-card">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Conformità & Garanzia</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-card">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Pronto Intervento</span>
+        <!-- Visual Hero: Immagine Tecnica / Quadro Elettrico -->
+        <div class="hero-visual-card">
+          <div class="hero-media-wrapper">
+            <div class="hero-image-box">
+              <img 
+                src="assets/images/hero.svg" 
+                alt="Quadro elettrico ad alta precisione e conformità normativa - Elettro Impianti"
+                class="hero-image-placeholder"
+                width="800" 
+                height="600"
+                fetchpriority="high"
+              />
+            </div>
+            <!-- Badge Overlay Tecnologico -->
+            <div class="hero-tech-badge-overlay">
+              <div class="badge-pulse" aria-hidden="true"></div>
+              <div>
+                <span class="badge-text-title">Qualità e Sicurezza Garantita</span>
+                <span class="badge-text-sub">Collaudi strumentali & materiali certificati</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Servizi Section -->
-    <section class="services-section section-padding" id="servizi">
+    <!-- ==================================================================
+         3. Strip Metriche (Placeholder chiari)
+         ================================================================== -->
+    <section class="metrics-strip" aria-label="Metriche e punti di forza">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">I Nostri Servizi</span>
-          <h2 class="section-title">Soluzioni Elettriche su Misura</h2>
-          <p class="section-desc">Dalla singola abitazione ai complessi industriali, garantiamo standard di efficienza energetica e sicurezza massimi.</p>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-value">[XX]+</span>
+            <span class="metric-label">Anni di esperienza</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">[XX]+</span>
+            <span class="metric-label">Installazioni completate</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">[XX]+</span>
+            <span class="metric-label">Clienti soddisfatti</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Conformità normativa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. Sezione Servizi
+         ================================================================== -->
+    <section class="section-padding circuit-pattern" id="servizi">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="eyebrow">Competenza a 360°</div>
+          <h2 class="section-title">I nostri servizi</h2>
+          <p class="section-desc">
+            Interventi eseguiti da personale qualificato con strumentazione all'avanguardia per garantire massima efficienza, continuità di servizio e sicurezza.
+          </p>
         </div>
 
         <div class="services-grid">
-          <!-- Card 1 -->
-          <article class="service-card" id="serviceCivili">
-            <div class="service-icon-wrap">⚡</div>
-            <h3>Impianti Elettrici Civili</h3>
-            <p>Rifacimento completo, messa a norma e certificazione impianti per abitazioni, condomini e appartamenti con componenti di prima scelta.</p>
-            <ul class="service-features">
-              <li>Certificato di conformità DM 37/08</li>
-              <li>Quadri salvavita di ultima generazione</li>
-              <li>Punti luce e prese intelligenti</li>
+          <!-- 1. Impianti Civili -->
+          <article class="service-card reveal-fade-up" id="servizio-civili">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1V9.5z"/></svg>
+            </div>
+            <h3>Impianti elettrici civili</h3>
+            <p>Realizzazione, rifacimento e manutenzione di impianti elettrici per abitazioni, condomini e attività private nel pieno rispetto delle norme CEI 64-8.</p>
+            <ul class="service-features-list">
+              <li>Quadri salvavita e linee dedicate</li>
+              <li>Punti luce, illuminotecnica a LED</li>
+              <li>Rilascio Dichiarazione di Conformità (Di.Co.)</li>
             </ul>
           </article>
 
-          <!-- Card 2 -->
-          <article class="service-card" id="serviceIndustriali">
-            <div class="service-icon-wrap">🏭</div>
-            <h3>Impianti Industriali</h3>
-            <p>Cablaggi strutturati, quadri di distribuzione BT/MT, canalizzazioni e manutenzione programmata per aziende, officine e capannoni.</p>
-            <ul class="service-features">
-              <li>Distribuzione forza motrice</li>
-              <li>Rifasamento e riduzione consumi</li>
-              <li>Collaudi strumentali periodici</li>
+          <!-- 2. Impianti Industriali -->
+          <article class="service-card reveal-fade-up" id="servizio-industriali">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2zM9 7v10m6-10v10"/></svg>
+            </div>
+            <h3>Impianti elettrici industriali</h3>
+            <p>Soluzioni elettriche complesse per aziende, stabilimenti, officine e strutture produttive con elevata richiesta di carico e continuità operativa.</p>
+            <ul class="service-features-list">
+              <li>Quadri di distribuzione BT/MT</li>
+              <li>Canalizzazioni metalliche e blindosbarre</li>
+              <li>Rifasamento e riduzione consumi energetici</li>
             </ul>
           </article>
 
-          <!-- Card 3 -->
-          <article class="service-card" id="serviceDomotica">
-            <div class="service-icon-wrap">📱</div>
-            <h3>Domotica & Smart Home</h3>
-            <p>Controllo integrato di illuminazione, climatizzazione, tapparelle ed elettrodomestici tramite smartphone e comandi vocali.</p>
-            <ul class="service-features">
-              <li>Integrazione KNX, Zigbee & Wi-Fi</li>
+          <!-- 3. Domotica -->
+          <article class="service-card reveal-fade-up" id="servizio-domotica">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+            </div>
+            <h3>Domotica</h3>
+            <p>Automazione e controllo intelligente di illuminazione, climatizzazione, tapparelle, accessi e dispositivi tramite interfaccia unificata.</p>
+            <ul class="service-features-list">
               <li>Scenari personalizzati e risparmio energetico</li>
-              <li>Gestione da remoto ovunque ti trovi</li>
+              <li>Integrazione smartphone e comandi vocali</li>
+              <li>Supervisione consumi in tempo reale</li>
             </ul>
           </article>
 
-          <!-- Card 4 -->
-          <article class="service-card" id="serviceSolare">
-            <div class="service-icon-wrap">☀️</div>
-            <h3>Fotovoltaico & Accumulo</h3>
-            <p>Impianti fotovoltaici con sistemi di accumulo a batteria al litio per massimizzare l'autoconsumo e azzerare i costi in bolletta.</p>
-            <ul class="service-features">
-              <li>Stima del rendimento gratuita</li>
-              <li>Sistemi inverter e batterie storage</li>
-              <li>Supporto pratiche e detrazioni</li>
+          <!-- 4. Impianti di allarme -->
+          <article class="service-card reveal-fade-up" id="servizio-allarme">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Impianti di allarme</h3>
+            <p>Sistemi di sicurezza avanzati per proteggere abitazioni, magazzini e attività commerciali contro intrusioni, manomissioni ed effrazioni.</p>
+            <ul class="service-features-list">
+              <li>Protezione perimetrale e volumetrica</li>
+              <li>Sensori a doppia tecnologia senza fili o filari</li>
+              <li>Avviso immediato su smartphone e centrale</li>
             </ul>
           </article>
 
-          <!-- Card 5 -->
-          <article class="service-card" id="serviceSicurezza">
-            <div class="service-icon-wrap">🛡️</div>
-            <h3>Sicurezza & Antintrusione</h3>
-            <p>Sistemi di allarme perimetrali e volumetrici wireless/filari e videosorveglianza IP HD con visione notturna e notifica su app.</p>
-            <ul class="service-features">
-              <li>Telecamere 4K e riconoscimento IA</li>
-              <li>Allarmi antieffrazione con combinatore</li>
-              <li>Videocitofonia smart connessa</li>
+          <!-- 5. Videosorveglianza -->
+          <article class="service-card reveal-fade-up" id="servizio-videosorveglianza">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+            </div>
+            <h3>Videosorveglianza</h3>
+            <p>Sistemi CCTV moderni ad altissima risoluzione con controllo locale, registrazione continua e monitoraggio da remoto via app crittografata.</p>
+            <ul class="service-features-list">
+              <li>Telecamere 4K con visione notturna avanzata</li>
+              <li>Analisi video intelligente e rilevamento varchi</li>
+              <li>Conformità alle normative sulla privacy e statuto dei lavoratori</li>
             </ul>
           </article>
 
-          <!-- Card 6 -->
-          <article class="service-card" id="serviceUrgenze">
-            <div class="service-icon-wrap">🚨</div>
-            <h3>Pronto Intervento & Guasti</h3>
-            <p>Assistenza rapida per cortocircuiti, blackout improvvisi, sostituzione differenziali e riparazione linee elettriche danneggiate.</p>
-            <ul class="service-features">
-              <li>Intervento celere per emergenze</li>
-              <li>Ricerca strumentale del guasto</li>
-              <li>Ripristino immediato della sicurezza</li>
+          <!-- 6. Automazione -->
+          <article class="service-card reveal-fade-up" id="servizio-automazione">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3>Automazione</h3>
+            <p>Automazione di cancelli carrai, portoni sezionali, serrande industriali e barriere stradali con motorizzazioni silenziose e sicure.</p>
+            <ul class="service-features-list">
+              <li>Dispositivi di sicurezza anticaduta e fotocellule</li>
+              <li>Apertura con radiocomando, tag o smartphone</li>
+              <li>Manutenzione periodica e verifiche di forza impatto</li>
             </ul>
           </article>
+
+          <!-- 7. Manutenzione -->
+          <article class="service-card reveal-fade-up" id="servizio-manutenzione">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.9 6.9a2 2 0 01-2.83-2.83l6.9-6.9a6 6 0 017.94-7.94l-3.94 3.6z"/></svg>
+            </div>
+            <h3>Manutenzione</h3>
+            <p>Interventi di manutenzione ordinaria e straordinaria per prevenire fermi operativi, guasti improvvisi e cali di rendimento.</p>
+            <ul class="service-features-list">
+              <li>Ispezioni strumentali e serraggio morsetti</li>
+              <li>Verifica taratura differenziali e tempi di scatto</li>
+              <li>Piani di assistenza programmata dedicati</li>
+            </ul>
+          </article>
+
+          <!-- 8. Adeguamento impianti -->
+          <article class="service-card reveal-fade-up" id="servizio-adeguamento">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg class="service-icon-svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3>Adeguamento impianti</h3>
+            <p>Interventi mirati per migliorare la sicurezza, l'efficienza energetica e la conformità legale degli impianti esistenti non più a norma.</p>
+            <ul class="service-features-list">
+              <li>Messa a norma impianto di messa a terra</li>
+              <li>Sostituzione quadri obsoleti e linee sottodimensionate</li>
+              <li>Redazione fascicolo tecnico e certificato di rispondenza</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- CTA Contestuale dopo i servizi -->
+        <div class="text-center" style="margin-top: 45px;">
+          <a href="#contatti" class="btn btn-outline-accent">
+            Hai un'esigenza specifica? Richiedi un sopralluogo tecnico
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Chi Siamo & Vantaggi -->
-    <section class="about-section section-padding" id="chi-siamo">
-      <div class="container about-grid">
-        <div class="about-content">
-          <span class="section-tag">Perché Sceglierci</span>
-          <h2 class="section-title">Professionalità, Trasparenza e Tecnologia</h2>
-          <p class="about-text">
-            Con oltre 15 anni di attività sul campo, <strong>ElettroImpianti</strong> è il partner di fiducia per privati e imprese. Ogni installazione viene eseguita seguendo rigorosamente le normative CEI vigenti, garantendo affidabilità duratura e massima efficienza energetica.
+    <!-- ==================================================================
+         5. Sezione Soluzioni (Macro categorie)
+         ================================================================== -->
+    <section class="section-padding" id="soluzioni">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="eyebrow">Aree di intervento</div>
+          <h2 class="section-title">Soluzioni per ogni esigenza</h2>
+          <p class="section-desc">
+            Ogni contesto richiede criteri di progettazione specifici. Adattiamo ogni impianto alle reali condizioni di utilizzo.
           </p>
-          
-          <div class="features-list" id="vantaggi">
-            <div class="feature-item">
-              <div class="feature-bullet">✔</div>
-              <div>
-                <h4>Materiali Certificati</h4>
-                <p>Collaboriamo solo con brand leader (BTicino, Schneider, ABB, Gewiss, Vimar) per assicurare massima affidabilità.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-bullet">✔</div>
-              <div>
-                <h4>Rilascio Dichiarazione di Conformità (Di.Co.)</h4>
-                <p>Tutti i lavori includono collaudo strumentale e documentazione tecnica ufficiale a norma di legge.</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-bullet">✔</div>
-              <div>
-                <h4>Preventivi Chiari e Dettagliati</h4>
-                <p>Nessuna spesa nascosta: sopralluogo attento e preventivo trasparente prima di iniziare qualsiasi lavoro.</p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="about-visual">
-          <div class="glass-panel accent-panel">
-            <div class="panel-icon">⚡</div>
-            <h3>Sicurezza al 100%</h3>
-            <p>Tutti gli impianti sono protetti da sovratensioni, sovraccarichi e dispersioni elettriche.</p>
-            <div class="panel-metric">
-              <span class="metric-val">Zero</span>
-              <span class="metric-desc">Compromessi sulla qualità dei componenti</span>
+        <div class="solutions-grid">
+          <!-- 1. CASA -->
+          <div class="solution-card reveal-fade-up">
+            <div class="solution-image-container">
+              <span class="solution-tag">Residenziale</span>
+              <img 
+                src="assets/images/electric.svg" 
+                alt="Impianti elettrici, domotica e sicurezza per abitazioni private" 
+                class="solution-image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Progetti / Realizzazioni -->
-    <section class="portfolio-section section-padding" id="progetti">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">I Nostri Lavori</span>
-          <h2 class="section-title">Alcuni dei Nostri Interventi Recenti</h2>
-          <p class="section-desc">Uno sguardo su impianti completati con cura artigianale e tecnologia innovativa.</p>
-        </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-badge">Domotica Villa Moderna</div>
-            <div class="portfolio-content">
-              <h3>Smart Home & Illuminazione Scenografica</h3>
-              <p>Automazione totale luci, riscaldamento, schermature solari con controllo vocale e scenari per una residenza di 280mq.</p>
+            <div class="solution-body">
+              <h3>CASA</h3>
+              <p>
+                Impianti elettrici, domotica, sicurezza e automazione per appartamenti, ville e condomini. Progettiamo spazi confortevoli, energeticamente efficienti e protetti da rischi elettrici o tentativi di intrusione.
+              </p>
+              <a href="#contatti" class="btn btn-secondary btn-block">Soluzioni per la tua casa</a>
             </div>
           </div>
 
-          <div class="portfolio-card">
-            <div class="portfolio-badge">Settore Terziario</div>
-            <div class="portfolio-content">
-              <h3>Quadro Generale & Rete Dati Uffici</h3>
-              <p>Progettazione e installazione quadro elettrico principale con gruppo di continuità e cablaggio strutturato Cat. 6A.</p>
+          <!-- 2. ATTIVITÀ COMMERCIALI -->
+          <div class="solution-card reveal-fade-up">
+            <div class="solution-image-container">
+              <span class="solution-tag">Terziario & Retail</span>
+              <img 
+                src="assets/images/commercial.svg" 
+                alt="Soluzioni elettriche e allarme per negozi, uffici e studi professionali" 
+                class="solution-image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="solution-body">
+              <h3>ATTIVITÀ COMMERCIALI</h3>
+              <p>
+                Soluzioni elettriche, illuminazione scenografica a LED e sistemi di sicurezza per negozi, uffici, studi professionali e ristorazione. Continuità di servizio, conformità antincendio e controllo accessi dipendenti.
+              </p>
+              <a href="#contatti" class="btn btn-secondary btn-block">Soluzioni per la tua attività</a>
             </div>
           </div>
 
-          <div class="portfolio-card">
-            <div class="portfolio-badge">Rinnovabili</div>
-            <div class="portfolio-content">
-              <h3>Impianto Fotovoltaico 10kW con Storage</h3>
-              <p>Installazione su tetto a falda con batteria di accumulo da 15kWh e monitoraggio dei consumi in tempo reale via cloud.</p>
+          <!-- 3. INDUSTRIA -->
+          <div class="solution-card reveal-fade-up">
+            <div class="solution-image-container">
+              <span class="solution-tag">Produttivo</span>
+              <img 
+                src="assets/images/industrial.svg" 
+                alt="Impianti industriali di potenza, quadri BT/MT e manutenzione continua" 
+                class="solution-image"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="solution-body">
+              <h3>INDUSTRIA</h3>
+              <p>
+                Impianti elettrici industriali di grande potenza, automazione di processo, quadri di comando macchinari e programmi di manutenzione predittiva per azzerare i fermi produttivi e massimizzare la resa energetica.
+              </p>
+              <a href="#contatti" class="btn btn-secondary btn-block">Soluzioni per l'industria</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sezione Contatti / Preventivo -->
-    <section class="contact-section section-padding" id="contatti">
-      <div class="container">
-        <div class="contact-box glass-panel">
-          <div class="contact-info">
-            <span class="section-tag">Contattaci Subito</span>
-            <h2 class="section-title">Hai un progetto o un guasto da risolvere?</h2>
-            <p>Compila il modulo per un sopralluogo senza impegno o chiama per pronto intervento.</p>
+    <!-- ==================================================================
+         6. Sezione Domotica
+         ================================================================== -->
+    <section class="domotics-section section-padding circuit-pattern" id="domotica">
+      <div class="container domotics-layout">
+        <div class="domotics-content reveal-fade-up">
+          <div class="eyebrow">Smart Living</div>
+          <h2>La tua casa. <span class="hero-title-accent">Più intelligente.</span></h2>
+          <p class="domotics-lead">
+            La tecnologia non deve complicare la tua quotidianità, ma renderla più semplice, comoda e sicura. Grazie ai moderni standard di automazione, ogni ambiente si adatta automaticamente alle tue abitudini.
+          </p>
 
-            <div class="info-items">
-              <div class="info-row">
-                <span class="info-icon">📍</span>
-                <div>
-                  <strong>Sede Operativa:</strong>
-                  <span>Via dell'Elettronica 12, Milano (MI)</span>
-                </div>
+          <div class="domotics-features-grid">
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">💡</span>
+              <div>
+                <h4>Illuminazione</h4>
+                <p>Scenari di luce dimmerabile e spegnimento automatico</p>
               </div>
-              <div class="info-row">
-                <span class="info-icon">📞</span>
-                <div>
-                  <strong>Telefono:</strong>
-                  <span>+39 02 1234567 / +39 340 0000000</span>
-                </div>
+            </div>
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">🌡️</span>
+              <div>
+                <h4>Climatizzazione</h4>
+                <p>Termoregolazione multizona per azzerare gli sprechi</p>
               </div>
-              <div class="info-row">
-                <span class="info-icon">✉️</span>
-                <div>
-                  <strong>Email:</strong>
-                  <span>info@elettroimpianti-esempio.it</span>
-                </div>
+            </div>
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">🪟</span>
+              <div>
+                <h4>Tapparelle & Schermi</h4>
+                <p>Movimentazione oraria o in base al meteo e al sole</p>
               </div>
-              <div class="info-row">
-                <span class="info-icon">⏰</span>
-                <div>
-                  <strong>Orari di Lavoro:</strong>
-                  <span>Lun - Ven: 08:00 - 18:30 (Emergenze H24)</span>
-                </div>
+            </div>
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">🚪</span>
+              <div>
+                <h4>Cancelli & Accessi</h4>
+                <p>Apertura automatica al tuo arrivo o da remoto</p>
+              </div>
+            </div>
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">📹</span>
+              <div>
+                <h4>Videosorveglianza</h4>
+                <p>Live stream telecamere sul display o telefono</p>
+              </div>
+            </div>
+            <div class="domo-feature-item">
+              <span class="domo-icon" aria-hidden="true">📱</span>
+              <div>
+                <h4>Gestione Smartphone</h4>
+                <p>Un'unica app semplice e intuitiva ovunque ti trovi</p>
               </div>
             </div>
           </div>
 
-          <div class="contact-form-wrap">
-            <form id="quoteForm" class="contact-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+          <a href="#contatti" class="btn btn-primary">Richiedi una consulenza domotica</a>
+        </div>
+
+        <!-- Dashboard Interattiva dimostrativa -->
+        <div class="domotics-interactive-panel reveal-fade-up" aria-label="Simulatore controllo domotico">
+          <div class="smart-dashboard-header">
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Smart Hub Elettro Impianti</h3>
+              <p style="font-size: 0.8rem; color: var(--color-text-dim);">Centrale domotica connessa e operativa</p>
+            </div>
+            <div class="smart-status-indicator">
+              <span></span> Sistema Attivo
+            </div>
+          </div>
+
+          <div class="smart-controls-list">
+            <div class="smart-control-row">
+              <div class="smart-control-info">
+                <span style="font-size: 1.2rem;">💡</span>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem;">Scenario "Sera Relax"</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Luci calde al 40%</span>
+                </div>
+              </div>
+              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva scenario relax">
+                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              </div>
+            </div>
+
+            <div class="smart-control-row">
+              <div class="smart-control-info">
+                <span style="font-size: 1.2rem;">🌡️</span>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem;">Zona Notte & Salone</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Climatizzazione costante a 20.5°C</span>
+                </div>
+              </div>
+              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva climatizzazione">
+                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              </div>
+            </div>
+
+            <div class="smart-control-row">
+              <div class="smart-control-info">
+                <span style="font-size: 1.2rem;">🪟</span>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem;">Chiusura Automatica Infissi</strong>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Chiusura programmata al tramonto</span>
+                </div>
+              </div>
+              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva automazione infissi">
+                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              </div>
+            </div>
+
+            <div class="smart-control-row">
+              <div class="smart-control-info">
+                <span style="font-size: 1.2rem;">⚡</span>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem;">Monitoraggio Assorbimento</strong>
+                  <span style="font-size: 0.78rem; color: #10b981;">Carico attuale: 1.4 kW / 3.3 kW (Ottimale)</span>
+                </div>
+              </div>
+              <span style="font-size: 0.85rem; font-weight:700; color:var(--color-accent);">NORM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         7. Sezione Sicurezza
+         ================================================================== -->
+    <section class="section-padding" id="sicurezza">
+      <div class="container security-grid">
+        <div class="security-intro reveal-fade-up">
+          <div class="eyebrow">Protezione Integrata</div>
+          <h2 class="section-title">Proteggi ciò che conta.</h2>
+          <p class="section-desc" style="margin-bottom: 28px;">
+            La sicurezza dei tuoi cari, della tua abitazione e dei tuoi beni aziendali richiede sistemi antintrusione progettati su misura, privi di punti ciechi e protetti da tentativi di sabotaggio.
+          </p>
+
+          <div class="security-cta-wrap">
+            <a href="#contatti" class="btn btn-primary btn-large">Parla con un tecnico specializzato</a>
+          </div>
+        </div>
+
+        <div class="security-cards-stack reveal-fade-up">
+          <div class="security-feature-card">
+            <div class="sec-icon-wrap" aria-hidden="true">🚨</div>
+            <div>
+              <h4>Sistemi di allarme avanzati</h4>
+              <p>Centrali certificate con connettività 4G/IP ridondata, sensori volumetrici con immunità animali domestici e barriere perimetrali esterne.</p>
+            </div>
+          </div>
+
+          <div class="security-feature-card">
+            <div class="sec-icon-wrap" aria-hidden="true">📹</div>
+            <div>
+              <h4>Videosorveglianza IP ad alta definizione</h4>
+              <p>Telecamere con riconoscimento ottico di persone e veicoli per evitare falsi allarmi, registrazione locale cifrata e visione notturna a colori.</p>
+            </div>
+          </div>
+
+          <div class="security-feature-card">
+            <div class="sec-icon-wrap" aria-hidden="true">🔐</div>
+            <div>
+              <h4>Controllo accessi e videocitofonia smart</h4>
+              <p>Rispondi al citofono dallo smartphone ovunque ti trovi e gestisci gli ingressi tramite codice numerico, badge RFID o impronta.</p>
+            </div>
+          </div>
+
+          <div class="security-feature-card">
+            <div class="sec-icon-wrap" aria-hidden="true">📲</div>
+            <div>
+              <h4>Notifiche push in tempo reale</h4>
+              <p>Avviso immediato su smartphone in caso di anomalia, taglio corrente, apertura varchi o rilevamento fumo/allagamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         8. Perché Elettro Impianti (Punti di forza)
+         ================================================================== -->
+    <section class="section-padding circuit-pattern" id="perche-noi">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="eyebrow">Affidabilità Certificata</div>
+          <h2 class="section-title">Perché scegliere Elettro Impianti</h2>
+          <p class="section-desc">
+            Scegliere noi significa affidarsi a professionisti dell'elettrotecnica che mettono al primo posto la conformità delle installazioni e la serenità del cliente.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Esperienza e competenza tecnica</h4>
+            <p>Aggiornamento continuo sulle normative vigenti e sulle tecnologie impiantistiche di ultima generazione.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Soluzioni personalizzate</h4>
+            <p>Non applichiamo schemi preconfezionati: ogni impianto nasce dallo studio approfondito delle reali necessità del cliente.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Materiali e componenti professionali</h4>
+            <p>Installiamo esclusivamente componentistica di prima scelta garantita dai migliori produttori europei.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Attenzione scrupolosa alla sicurezza</h4>
+            <p>Collaudo accurato di ogni interruttore differenziale, verifica delle impedenze e dell'anello di terra.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Assistenza post-installazione</h4>
+            <p>Rimaniamo il tuo punto di riferimento anche dopo il lavoro, con piani di manutenzione periodica e supporto guasti.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Progettazione completa e rilascio Di.Co.</h4>
+            <p>Consegna di tutta la documentazione tecnica, schemi unifilari e dichiarazione di conformità a norma di legge.</p>
+          </div>
+
+          <div class="why-item reveal-fade-up">
+            <div class="why-badge" aria-hidden="true">✓</div>
+            <h4>Interventi civili e industriali</h4>
+            <p>Dalla ristrutturazione dell'appartamento alla linea di produzione industriale, con la stessa precisione esecutiva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         9. Processo di Lavoro (Timeline in 4 fasi)
+         ================================================================== -->
+    <section class="section-padding" id="azienda">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="eyebrow">Metodo Collaudato</div>
+          <h2 class="section-title">Dal progetto alla realizzazione</h2>
+          <p class="section-desc">Un iter trasparente, chiaro e senza imprevisti per portare a termine il tuo impianto a regola d'arte.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal-fade-up">
+            <span class="step-number">01</span>
+            <h3>Sopralluogo</h3>
+            <p>Incontro sul posto per visionare lo stato dei luoghi, valutare le canalizzazioni e comprendere le esigenze operative del cliente.</p>
+          </div>
+
+          <div class="process-step reveal-fade-up">
+            <span class="step-number">02</span>
+            <h3>Analisi e progettazione</h3>
+            <p>Calcolo dei carichi elettrici, selezione dei componenti conformi alle norme CEI e stesura di un preventivo chiaro e trasparente.</p>
+          </div>
+
+          <div class="process-step reveal-fade-up">
+            <span class="step-number">03</span>
+            <h3>Installazione</h3>
+            <p>Posa a regola d'arte di cavi, quadri, sensori e apparecchiature da parte di tecnici specializzati, con pulizia e rispetto dei tempi concordati.</p>
+          </div>
+
+          <div class="process-step reveal-fade-up">
+            <span class="step-number">04</span>
+            <h3>Collaudo e assistenza</h3>
+            <p>Test strumentale completo, spiegazione del funzionamento all'utente, rilascio delle certificazioni e garanzia post-vendita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         10. Grande Call to Action prima del contatto
+         ================================================================== -->
+    <section class="global-cta-section section-padding-sm" aria-label="Invito all'azione principale">
+      <div class="container">
+        <div class="cta-banner-card reveal-fade-up">
+          <h2>Hai bisogno di un impianto elettrico o di un sistema di sicurezza?</h2>
+          <p>
+            Parlaci del tuo progetto. Ti aiuteremo a individuare la soluzione più adatta alle tue esigenze con un preventivo chiaro e senza impegno.
+          </p>
+          <a href="#contatti" class="btn btn-primary btn-large">Richiedi un preventivo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         11. Sezione Contatti & Modulo di Richiesta Preventivo
+         ================================================================== -->
+    <section class="section-padding circuit-pattern" id="contatti">
+      <div class="container contact-section-grid">
+        <!-- Scheda Recapiti & Località Aziendale -->
+        <div class="contact-meta-card reveal-fade-up">
+          <div class="eyebrow">Filo Diretto</div>
+          <h2 class="section-title" style="font-size: 2.1rem;">Contattaci per una consulenza</h2>
+          <p>
+            Siamo a tua completa disposizione per informazioni, sopralluoghi tecnici o richieste di preventivo dettagliate.
+          </p>
+
+          <div class="contact-meta-list">
+            <div class="contact-meta-item">
+              <div class="meta-icon-box" aria-hidden="true">📍</div>
+              <div>
+                <span class="meta-item-title">Sede Operativa</span>
+                <span class="meta-item-value">ADDRESS, CITY (PROVINCE)</span>
+                <p style="font-size: 0.8rem; color: var(--color-text-dim); margin-top:2px;">Area servita: SERVICE_AREA e limitrofi</p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="meta-icon-box" aria-hidden="true">📞</div>
+              <div>
+                <span class="meta-item-title">Telefono Rapido</span>
+                <a href="tel:CONTACT_PHONE" class="meta-item-value" style="color:var(--color-accent);">CONTACT_PHONE</a>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="meta-icon-box" aria-hidden="true">💬</div>
+              <div>
+                <span class="meta-item-title">WhatsApp Assistenza</span>
+                <a href="https://wa.me/CONTACT_WHATSAPP" target="_blank" rel="noopener noreferrer" class="meta-item-value" style="color:#4ade80;">
+                  Chatta su WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="meta-icon-box" aria-hidden="true">✉️</div>
+              <div>
+                <span class="meta-item-title">Email Informativa</span>
+                <a href="mailto:CONTACT_EMAIL" class="meta-item-value">CONTACT_EMAIL</a>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="meta-icon-box" aria-hidden="true">🕒</div>
+              <div>
+                <span class="meta-item-title">Orari di Lavoro</span>
+                <span class="meta-item-value">Lun - Ven: 08:00 - 18:30 (Reperibilità per emergenze)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--color-border);">
+            <p style="font-size: 0.85rem; color: var(--color-text-dim);">
+              Rispondiamo a tutte le richieste di preventivo entro un giorno lavorativo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Modulo di Richiesta Preventivo Form -->
+        <div class="contact-form-container reveal-fade-up">
+          <h3 class="contact-form-title">Compila il modulo per un preventivo</h3>
+          <p class="contact-form-desc">Tutti i campi con asterisco (*) sono obbligatori per formulare una risposta precisa.</p>
+
+          <form id="contactQuoteForm" class="contact-form" novalidate>
+            <!-- Campo Honeypot antispam nascosto ai visitatori reali -->
+            <div class="hp-hidden" aria-hidden="true">
+              <label for="website_company_url">Non compilare questo campo</label>
+              <input type="text" id="website_company_url" name="website_company_url" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <!-- Nome e Cognome -->
+            <div class="form-group">
+              <label for="fullName" class="form-label">Nome e cognome <span class="form-required">*</span></label>
+              <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Mario Rossi" required autocomplete="name" />
+              <span class="form-error-text" id="fullName-error">Inserisci il tuo nome e cognome completo.</span>
+            </div>
+
+            <div class="form-row-2">
+              <!-- Email -->
               <div class="form-group">
-                <label for="fullName">Nome e Cognome *</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Mario Rossi" />
+                <label for="email" class="form-label">Email <span class="form-required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="mario.rossi@email.it" required autocomplete="email" />
+                <span class="form-error-text" id="email-error">Inserisci un indirizzo email valido.</span>
               </div>
 
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label for="emailAddr">Email *</label>
-                  <input type="email" id="emailAddr" name="email" required placeholder="mario.rossi@email.com" />
-                </div>
-                <div class="form-group">
-                  <label for="phoneNum">Telefono *</label>
-                  <input type="tel" id="phoneNum" name="phone" required placeholder="+39 333 1234567" />
-                </div>
-              </div>
-
+              <!-- Telefono -->
               <div class="form-group">
-                <label for="serviceType">Tipo di Richiesta *</label>
-                <select id="serviceType" name="serviceType" required>
-                  <option value="" disabled selected>Seleziona un servizio...</option>
-                  <option value="civile">Impianto Elettrico Civile</option>
-                  <option value="industriale">Impianto Industriale / Azienda</option>
-                  <option value="domotica">Domotica e Smart Home</option>
-                  <option value="fotovoltaico">Fotovoltaico ed Accumulo</option>
-                  <option value="sicurezza">Allarme e Videosorveglianza</option>
-                  <option value="guasto">Pronto Intervento / Riparazione Guasto</option>
+                <label for="phone" class="form-label">Telefono <span class="form-required">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+39 340 000 0000" required autocomplete="tel" />
+                <span class="form-error-text" id="phone-error">Inserisci un recapito telefonico.</span>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <!-- Tipologia di Servizio -->
+              <div class="form-group">
+                <label for="serviceType" class="form-label">Tipologia di servizio <span class="form-required">*</span></label>
+                <select id="serviceType" name="serviceType" class="form-control" required>
+                  <option value="" disabled selected>Seleziona il servizio desiderato...</option>
+                  <option value="Impianto elettrico civile">Impianto elettrico civile</option>
+                  <option value="Impianto elettrico industriale">Impianto elettrico industriale</option>
+                  <option value="Domotica">Domotica</option>
+                  <option value="Impianto di allarme">Impianto di allarme</option>
+                  <option value="Videosorveglianza">Videosorveglianza</option>
+                  <option value="Automazione">Automazione</option>
+                  <option value="Manutenzione">Manutenzione</option>
+                  <option value="Altro">Altro</option>
                 </select>
+                <span class="form-error-text" id="serviceType-error">Seleziona una categoria di servizio.</span>
               </div>
 
+              <!-- Località -->
               <div class="form-group">
-                <label for="message">Dettagli del lavoro</label>
-                <textarea id="message" name="message" rows="4" placeholder="Descrivi brevemente l'esigenza o i mq dell'immobile..."></textarea>
+                <label for="location" class="form-label">Località intervento</label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="Es. CITY o limitrofi" />
               </div>
+            </div>
 
-              <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
-                Invia Richiesta Preventivo
-              </button>
+            <!-- Messaggio -->
+            <div class="form-group">
+              <label for="message" class="form-label">Messaggio o dettagli del progetto <span class="form-required">*</span></label>
+              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Descrivi brevemente l'immobile, l'intervento necessario o eventuali tempistiche..." required></textarea>
+              <span class="form-error-text" id="message-error">Scrivi una breve descrizione del lavoro da svolgere.</span>
+            </div>
 
-              <div id="formSuccessMessage" class="form-feedback hidden">
-                ✅ Grazie! La tua richiesta è stata registrata. Ti ricontatteremo entro 24 ore.
+            <!-- Checkbox Privacy -->
+            <div class="privacy-checkbox-wrapper">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy" class="privacy-label">
+                Ho letto l'<a href="#privacy-policy" id="privacyLink">informativa privacy</a> e acconsento al trattamento dei dati personali per la gestione della richiesta di preventivo. <span class="form-required">*</span>
+              </label>
+            </div>
+            <span class="form-error-text" id="privacy-error">È obbligatorio acconsentire al trattamento dati per inviare il modulo.</span>
+
+            <!-- Pulsante Invio -->
+            <button type="submit" class="btn btn-primary btn-large btn-block" id="formSubmitBtn">
+              Richiedi preventivo
+            </button>
+
+            <!-- Feedback di invio (Successo / Errore) -->
+            <div class="form-alert success" id="formAlertSuccess" role="alert">
+              <span>✅</span>
+              <div>
+                <strong>Richiesta inviata con successo!</strong>
+                <p>Grazie per averci contattato. Un nostro tecnico esaminerà i dettagli e ti ricontatterà al più presto.</p>
               </div>
-            </form>
-          </div>
+            </div>
+
+            <div class="form-alert error" id="formAlertError" role="alert">
+              <span>⚠️</span>
+              <div id="formAlertErrorMsg">
+                Si è verificato un errore. Per favore controlla i dati o contattaci telefonicamente.
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ====================================================================
+       12. Footer
+       ==================================================================== -->
   <footer class="site-footer">
-    <div class="container footer-content">
+    <div class="container footer-grid">
+      <!-- Colonna Brand -->
       <div class="footer-col">
-        <a href="#hero" class="brand-logo footer-logo">
-          <span class="logo-icon">⚡</span>
-          <span class="logo-text">Elettro<span class="accent-text">Impianti</span></span>
+        <a href="#hero" class="brand-logo" aria-label="Elettro Impianti Home">
+          <div class="logo-symbol" aria-hidden="true">⚡</div>
+          <div class="logo-text-group">
+            <span class="logo-primary">ELETTRO</span>
+            <span class="logo-sub">IMPIANTI</span>
+          </div>
         </a>
-        <p class="footer-desc">Soluzioni impiantistiche avanzate, sicurezza elettrica e sostenibilità energetica dal 2010.</p>
+        <p class="footer-brand-desc">
+          Soluzioni professionali nel campo dell'impiantistica elettrica civile e industriale, automazioni tecnologiche, domotica evoluta e sicurezza certificata.
+        </p>
       </div>
 
+      <!-- Link Navigazione -->
       <div class="footer-col">
-        <h4>Link Rapidi</h4>
-        <ul>
-          <li><a href="#servizi">Servizi Elettrici</a></li>
-          <li><a href="#chi-siamo">Chi Siamo</a></li>
-          <li><a href="#progetti">Realizzazioni</a></li>
-          <li><a href="#contatti">Preventivo</a></li>
+        <h4>Navigazione</h4>
+        <ul class="footer-links-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#azienda">Azienda</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#soluzioni">Soluzioni</a></li>
+          <li><a href="#perche-noi">Perché noi</a></li>
+          <li><a href="#contatti">Contatti</a></li>
         </ul>
       </div>
 
+      <!-- Legal & Conformità -->
+      <div class="footer-col" id="privacy-policy">
+        <h4>Legale & Normative</h4>
+        <ul class="footer-links-list">
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="#privacy-policy">Cookie Policy</a></li>
+          <li><a href="#servizi">Conformità DM 37/08</a></li>
+          <li><a href="#servizi">Standard CEI 64-8</a></li>
+        </ul>
+      </div>
+
+      <!-- Contatti diretti -->
       <div class="footer-col">
-        <h4>Normative & Garanzie</h4>
-        <ul>
-          <li>Conformità DM 37/08</li>
-          <li>Standard CEI 64-8</li>
-          <li>Pronto Intervento Attivo</li>
-          <li>Copertura Assicurativa RC</li>
+        <h4>Contatti</h4>
+        <ul class="footer-links-list">
+          <li><strong>Sede:</strong> ADDRESS, CITY (PROVINCE)</li>
+          <li><strong>Tel:</strong> <a href="tel:CONTACT_PHONE">CONTACT_PHONE</a></li>
+          <li><strong>Email:</strong> <a href="mailto:CONTACT_EMAIL">CONTACT_EMAIL</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/CONTACT_WHATSAPP" target="_blank" rel="noopener noreferrer">Assistenza Rapida</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container bottom-flex">
-        <p>© 2026 ElettroImpianti. Tutti i diritti riservati. P.IVA 01234567890</p>
-        <p>Progettato con standard moderni di efficienza e accessibilità.</p>
+
+    <!-- Barra inferiore con copyright e crediti -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-flex">
+        <div>
+          © 2026 Elettro Impianti — Tutti i diritti riservati.
+        </div>
+        <div>
+          P.IVA: [INSERIRE_PARTITA_IVA] • Progettato per massime prestazioni e conformità WCAG
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ====================================================================
+       13. Sticky Action Bar Mobile (visibile solo su smartphone)
+       ==================================================================== -->
+  <aside class="mobile-sticky-bar" aria-label="Azioni rapide di contatto">
+    <div class="mobile-sticky-actions">
+      <a href="tel:CONTACT_PHONE" class="mobile-action-btn btn-call" aria-label="Chiama ora telefonicamente">
+        <span class="mobile-action-icon" aria-hidden="true">☎</span>
+        <span>Chiama ora</span>
+      </a>
+      <a href="https://wa.me/CONTACT_WHATSAPP" target="_blank" rel="noopener noreferrer" class="mobile-action-btn btn-wa" aria-label="Scrivici su WhatsApp">
+        <span class="mobile-action-icon" aria-hidden="true">💬</span>
+        <span>WhatsApp</span>
+      </a>
+      <a href="#contatti" class="mobile-action-btn btn-quote" aria-label="Richiedi un preventivo">
+        <span class="mobile-action-icon" aria-hidden="true">✉</span>
+        <span>Preventivo</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ====================================================================
+       14. GDPR Cookie Consent Banner
+       ==================================================================== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-labelledby="cookieBannerTitle">
+    <h4 class="cookie-title" id="cookieBannerTitle">Informativa sui Cookie</h4>
+    <p class="cookie-text">
+      Questo sito utilizza esclusivamente cookie tecnici essenziali per il corretto funzionamento e l'invio sicuro dei moduli. Non utilizziamo cookie di profilazione o tracciamento senza il tuo esplicito consenso.
+    </p>
+    <div class="cookie-buttons">
+      <button class="btn btn-primary" id="acceptCookiesBtn">Accetta essenziali</button>
+      <button class="btn btn-secondary" id="declineCookiesBtn">Chiudi</button>
+    </div>
+  </div>
+
+  <!-- JavaScript ES6+ asincrono e differito -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
