@@ -8,32 +8,33 @@
    1. CSS Custom Properties / Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Primary & Surface colors */
-  --color-bg-main: #0a0e17;        /* Profondo blu navy scurissimo */
-  --color-bg-surface: #111827;     /* Antracite / slate scuro per card */
-  --color-bg-surface-elevated: #1a2234;
-  --color-bg-subtle: #0d1320;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 190, 11, 0.35);
+  /* Primary & Surface colors (Palette Ufficiale) */
+  --color-bg-main: #07111F;             /* Deep Electric Navy */
+  --color-bg-surface: #112A42;          /* Technical Steel Blue */
+  --color-bg-surface-elevated: #163654; /* Elevated Steel Blue */
+  --color-bg-subtle: #0B192A;           /* Subtle Dark Navy */
+  --color-border: #22364B;              /* Technical Border Gray */
+  --color-border-hover: rgba(255, 209, 59, 0.45);
 
-  /* Brand Accents (Elettricità & Energia calibrata, non sature o neon) */
-  --color-accent: #ffbe0b;         /* Giallo ambra / elettrico caldo */
-  --color-accent-hover: #fb5607;   /* Arancio caldo energico per hover */
-  --color-accent-subtle: rgba(255, 190, 11, 0.12);
-  --color-accent-glow: rgba(255, 190, 11, 0.25);
-  --color-tech-blue: #3a86ff;      /* Accento tecnologico complementare */
+  /* Brand Accents (Distintivo Elettrico Calibrato WCAG 2.2) */
+  --color-accent: #FFD13B;              /* Electric Amber Yellow */
+  --color-accent-hover: #FF8A00;        /* Kinetic Orange per hover dinamico */
+  --color-accent-subtle: rgba(255, 209, 59, 0.12);
+  --color-accent-glow: rgba(255, 209, 59, 0.28);
+  --color-tech-blue: #38BDF8;           /* Info & Telemetria Elettrica */
 
-  /* Typography Colors */
-  --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-text-dim: #64748b;
-  --color-text-inverse: #0a0e17;
+  /* Typography Colors (Contrasto AAA WCAG 2.2) */
+  --color-text-main: #F4F7FA;           /* Polar Clean White */
+  --color-text-muted: #8EA2B4;          /* Steel Slate Gray */
+  --color-text-dim: #607487;            /* Dimmed Slate */
+  --color-text-inverse: #07111F;        /* Deep Electric Navy per bottoni gialli */
 
   /* Status Colors */
-  --color-success: #10b981;
-  --color-success-bg: rgba(16, 185, 129, 0.12);
-  --color-error: #ef4444;
-  --color-error-bg: rgba(239, 68, 68, 0.12);
+  --color-success: #00D284;
+  --color-success-bg: rgba(0, 210, 132, 0.12);
+  --color-warning: #FFA800;
+  --color-error: #FF4444;
+  --color-error-bg: rgba(255, 68, 68, 0.12);
 
   /* Typography scale */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -43,7 +44,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
   --shadow-card: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
-  --shadow-accent: 0 8px 25px rgba(255, 190, 11, 0.25);
+  --shadow-accent: 0 8px 25px rgba(255, 209, 59, 0.3);
 
   /* Radius */
   --radius-sm: 6px;
@@ -79,9 +80,9 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg-main);
-  /* Sfondo fisso con gradiente protettivo e immagine architettura circuiti */
+  /* Sfondo fisso con gradiente calibrato sulla nuova palette Deep Electric Navy */
   background-image: 
-    linear-gradient(180deg, rgba(10, 14, 23, 0.94) 0%, rgba(10, 14, 23, 0.88) 50%, rgba(10, 14, 23, 0.97) 100%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.94) 0%, rgba(7, 17, 31, 0.88) 50%, rgba(7, 17, 31, 0.97) 100%),
     url('../assets/images/site-bg.jpg');
   background-attachment: fixed;
   background-position: center center;
