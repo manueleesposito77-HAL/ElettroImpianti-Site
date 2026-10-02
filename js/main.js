@@ -89,18 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 3. Interactive Smart Home Controls (Domotica demo)
+  // 3. Interactive Smart Home Controls (Domotica demo & Telemetria)
   // -------------------------------------------------------------------------
   const smartSwitches = document.querySelectorAll('.smart-switch');
+  const lightDesc = document.getElementById('lightScenarioDesc');
+  const climateDesc = document.getElementById('climateDesc');
+  const blindsDesc = document.getElementById('blindsDesc');
+  const powerLoadDesc = document.getElementById('powerLoadDesc');
+  const powerBadge = document.getElementById('powerLoadBadge');
+
+  const updatePowerTelemetry = () => {
+    let baseLoad = 0.4; // Standby elettrodomestici
+    const lightOn = document.getElementById('switchLight')?.getAttribute('data-state') === 'on';
+    const climateOn = document.getElementById('switchClimate')?.getAttribute('data-state') === 'on';
+    const blindsOn = document.getElementById('switchBlinds')?.getAttribute('data-state') === 'on';
+
+    if (lightOn) baseLoad += 0.3;
+    if (climateOn) baseLoad += 0.7;
+    if (blindsOn) baseLoad += 0.1;
+
+    const formattedLoad = baseLoad.toFixed(1);
+    if (powerLoadDesc) {
+      powerLoadDesc.textContent = `Carico attuale: ${formattedLoad} kW / 3.3 kW (${baseLoad > 1.2 ? 'Normale' : 'Basso consumo'})`;
+    }
+  };
+
   smartSwitches.forEach(sw => {
-    sw.addEventListener('click', () => {
-      const isOn = sw.getAttribute('data-state') === 'on';
-      sw.setAttribute('data-state', isOn ? 'off' : 'on');
-      sw.style.background = isOn ? '#334155' : 'var(--color-accent)';
-      const indicator = sw.querySelector('span');
-      if (indicator) {
-        indicator.style.transform = isOn ? 'translateX(-20px)' : 'translateX(0)';
+    sw.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentState = sw.getAttribute('data-state');
+      const isCurrentlyOn = currentState === 'on';
+      const newState = isCurrentlyOn ? 'off' : 'on';
+      sw.setAttribute('data-state', newState);
+
+      // Aggiornamento descrizioni contestuali
+      if (sw.id === 'switchLight' && lightDesc) {
+        lightDesc.textContent = newState === 'on' ? 'Luci calde al 40% (Attivo)' : 'Luci spente (Standby)';
+      } else if (sw.id === 'switchClimate' && climateDesc) {
+        climateDesc.textContent = newState === 'on' ? 'Climatizzazione costante a 20.5°C' : 'Termostato spento';
+      } else if (sw.id === 'switchBlinds' && blindsDesc) {
+        blindsDesc.textContent = newState === 'on' ? 'Chiusura programmata al tramonto' : 'Controllo manuale';
       }
+
+      updatePowerTelemetry();
     });
   });
 

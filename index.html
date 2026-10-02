@@ -630,11 +630,11 @@
                 <span style="font-size: 1.2rem;">💡</span>
                 <div>
                   <strong style="display:block; font-size: 0.9rem;">Scenario "Sera Relax"</strong>
-                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Luci calde al 40%</span>
+                  <span id="lightScenarioDesc" style="font-size: 0.78rem; color: var(--color-text-muted);">Luci calde al 40% (Attivo)</span>
                 </div>
               </div>
-              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva scenario relax">
-                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              <div class="smart-switch" id="switchLight" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva scenario relax">
+                <span class="smart-switch-knob"></span>
               </div>
             </div>
 
@@ -643,11 +643,11 @@
                 <span style="font-size: 1.2rem;">🌡️</span>
                 <div>
                   <strong style="display:block; font-size: 0.9rem;">Zona Notte & Salone</strong>
-                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Climatizzazione costante a 20.5°C</span>
+                  <span id="climateDesc" style="font-size: 0.78rem; color: var(--color-text-muted);">Climatizzazione costante a 20.5°C</span>
                 </div>
               </div>
-              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva climatizzazione">
-                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              <div class="smart-switch" id="switchClimate" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva climatizzazione">
+                <span class="smart-switch-knob"></span>
               </div>
             </div>
 
@@ -656,11 +656,11 @@
                 <span style="font-size: 1.2rem;">🪟</span>
                 <div>
                   <strong style="display:block; font-size: 0.9rem;">Chiusura Automatica Infissi</strong>
-                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Chiusura programmata al tramonto</span>
+                  <span id="blindsDesc" style="font-size: 0.78rem; color: var(--color-text-muted);">Chiusura programmata al tramonto</span>
                 </div>
               </div>
-              <div class="smart-switch" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva automazione infissi">
-                <span style="width:20px; height:20px; background:#000; border-radius:50%; display:block; position:absolute; top:2px; right:2px; transition:transform 0.2s;"></span>
+              <div class="smart-switch" id="switchBlinds" data-state="on" role="button" tabindex="0" aria-label="Attiva disattiva automazione infissi">
+                <span class="smart-switch-knob"></span>
               </div>
             </div>
 
@@ -669,10 +669,10 @@
                 <span style="font-size: 1.2rem;">⚡</span>
                 <div>
                   <strong style="display:block; font-size: 0.9rem;">Monitoraggio Assorbimento</strong>
-                  <span style="font-size: 0.78rem; color: #10b981;">Carico attuale: 1.4 kW / 3.3 kW (Ottimale)</span>
+                  <span id="powerLoadDesc" style="font-size: 0.78rem; color: #00D284;">Carico attuale: 1.4 kW / 3.3 kW (Ottimale)</span>
                 </div>
               </div>
-              <span style="font-size: 0.85rem; font-weight:700; color:var(--color-accent);">NORM</span>
+              <span id="powerLoadBadge" style="font-size: 0.85rem; font-weight:700; color:var(--color-accent);">NORM</span>
             </div>
           </div>
         </div>
