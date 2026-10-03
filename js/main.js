@@ -138,35 +138,30 @@ function initGsapAnimations() {
     }
   );
 
-  // 5. Sezione Servizi: Animazione a comparsa con leggero Zoom & Salita (stagger)
+  // 5. Sezione Servizi: Animazione a comparsa differenziata per fila (la seconda fila appare solo quando visualizzata)
   const serviceCards = document.querySelectorAll('.service-card-item');
   if (serviceCards.length > 0) {
-    gsap.fromTo(
-      serviceCards,
-      {
-        opacity: 0,
-        y: 50,
-        scale: 0.92,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.12,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '#serviziSection',
-          start: 'top 75%',
-          toggleActions: 'play none none none',
-          once: true,
+    // Imposta lo stato iniziale
+    gsap.set(serviceCards, { opacity: 0, y: 50, scale: 0.92 });
+
+    ScrollTrigger.batch(serviceCards, {
+      start: 'top 85%',
+      once: true,
+      onEnter: (batch) => {
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.75,
+          stagger: 0.12,
+          ease: 'power2.out',
           onComplete: () => {
-            // Pulisce la trasformazione inline per consentire il perfetto hover CSS
-            gsap.set(serviceCards, { clearProps: 'transform' });
+            // Pulisce le trasformazioni inline per consentire il perfetto hover CSS
+            gsap.set(batch, { clearProps: 'transform' });
           },
-        },
-      }
-    );
+        });
+      },
+    });
   }
 
   // 6. Tracce Circuito (SVG) che si "disegnano" allo scorrimento
