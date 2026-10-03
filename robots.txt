@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or sensitive technical assets
-Disallow: /contact.php
-
-Sitemap: https://www.DOMINIO.IT/sitemap.xml
+Sitemap: https://manueleesposito77-hal.github.io/ElettroImpianti-Site/sitemap.xml

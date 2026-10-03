@@ -1,14 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a1224" />
-      <stop offset="100%" stop-color="#14213d" />
-    </linearGradient>
-    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffbe0b" />
-      <stop offset="100%" stop-color="#fb5607" />
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#brandGrad)" stroke="rgba(255, 190, 11, 0.4)" stroke-width="2"/>
-  <path d="M35 8 L18 34 L32 34 L29 56 L46 30 L32 30 Z" fill="url(#boltGrad)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Sfondo Scudo Protettivo -->
+  <path d="M32 4L10 14V30C10 44 19.5 56.5 32 60C44.5 56.5 54 44 54 30V14L32 4Z" fill="#121212" stroke="#2B2D2F" stroke-width="2"/>
+  
+  <!-- Tracce Circuito Elettrico -->
+  <path d="M16 28H22L26 34H30" stroke="#D71920" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <circle cx="16" cy="28" r="2.5" fill="#D71920"/>
+  <circle cx="30" cy="34" r="2" fill="#D71920"/>
+
+  <path d="M48 24H42L38 30H34" stroke="#D71920" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <circle cx="48" cy="24" r="2.5" fill="#D71920"/>
+  <circle cx="34" cy="30" r="2" fill="#D71920"/>
+
+  <!-- Fulmine Energia Dinamica -->
+  <path d="M34 12L22 32H32L28 50L44 28H34L38 12H34Z" fill="#D71920" filter="drop-shadow(0px 0px 6px rgba(215, 25, 32, 0.6))"/>
+  <path d="M33 16L25 31H32L29 44L41 29H34L37 16H33Z" fill="#FF444B"/>
 </svg>
