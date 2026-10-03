@@ -25,6 +25,8 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
   - Sede Legale/Operativa: `Via Esempio, 123 - 00100 Roma (RM) [Sede Dimostrativa]`
   - P.IVA: `00000000000 (Dati Dimostrativi)` | REA: `RM-000000` | PEC: `pec@esempio-dimostrativo.it`
   - Modulo di contatto strutturato con riscontro entro 24h lavorative e autocompilazione della zona cliccando sulle aree territoriali di Roma.
+- **Canali Social Ufficiali (Icone Vettoriali a Tema)**:
+  - Facebook, Instagram e TikTok integrati nella Top Bar dell'header, nel drawer di navigazione mobile e nella prima colonna del footer istituzionale (con hover dinamico in rosso brand `#D71920` e micro-zoom). Link impostati su placeholder `#` pronti per gli URL definitivi.
 
 ## Identità Visiva e Brand Assets
 - **Immagine di Sfondo Hero**: Fotografia panoramica ufficiale ad alta definizione (`bg_wide.png` / `1536x1024`) del tecnico elettricista con tuta brandizzata ElettroImpianti e multimetro al quadro elettrico, salvata e ottimizzata in `assets/images/hero-bg.jpg`, `assets/images/hero-poster.jpg` e `assets/images/bg_wide.png` (con effetto parallasse GSAP ScrollTrigger e overlay a maglia tecnica).
