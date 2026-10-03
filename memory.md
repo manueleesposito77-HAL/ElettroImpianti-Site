@@ -1,59 +1,60 @@
-# Memoria Progetto: Elettro Impianti Landing Page
+# Memoria Progetto: Elettro Impianti Landing Page (Versione Essenziale & Moderna)
 
 ## Descrizione
-Landing page professionale, moderna, conversion-oriented ed elegante per **Elettro Impianti**, azienda italiana operante nel settore impiantistico civile e industriale, domotica smart living, videosorveglianza CCTV, allarmi antintrusione e automazioni.
+Landing page professionale, moderna, estremamente pulita ed essenziale per **Elettro Impianti**, azienda specializzata in impianti elettrici civili e industriali, domotica smart, videosorveglianza CCTV, allarmi antintrusione e manutenzioni certificate (DM 37/08).
+
+La pagina è stata completamente riprogettata da zero per eliminare ogni ridondanza, offrire grande respiro visivo (white space), massima leggibilità tipografica e una focalizzazione totale sull'azione (richiesta preventivo e contatto diretto).
 
 ## Repository Remoto & Anteprima Online
 - **URL GitHub**: [https://github.com/manueleesposito77-HAL/ElettroImpianti-Site](https://github.com/manueleesposito77-HAL/ElettroImpianti-Site)
 - **Live Demo GitHub Pages**: [https://manueleesposito77-hal.github.io/ElettroImpianti-Site/](https://manueleesposito77-hal.github.io/ElettroImpianti-Site/)
 - **Ramo Principale**: `main`
-- **Visibilità**: Pubblico
 
 ## Palette Colori Ufficiale (Conforme WCAG 2.2 AAA / AA)
 - **Primary / Background**: `#07111F` (Deep Electric Navy)
-- **Secondary / Card & Superfici**: `#112A42` (Technical Steel Blue)
-- **Elevated Surface**: `#163654` (Elevated Steel Blue)
-- **Border / Griglie**: `#22364B` (Technical Border Gray)
+- **Secondary / Card & Superfici**: `#0E1D2F` (Clean Technical Navy)
+- **Elevated Surface**: `#14273E` (Elevated Steel Blue)
+- **Border / Griglie**: `#1F364E` (Technical Border Gray)
 - **Accent Brand Distintivo**: `#FFD13B` (Electric Amber Yellow)
-- **Accent Supporto Energetico**: `#FF8A00` (Kinetic Orange per hover state)
+- **Accent Supporto Energetico**: `#FFC000` (Hover Amber)
 - **Testo Primario**: `#F4F7FA` (Polar Clean White)
-- **Testo Secondario & Didascalie**: `#8EA2B4` (Steel Slate Gray)
-- **Status Colors**:
-  - Success / Attivo: `#00D284`
-  - Warning: `#FFA800`
-  - Error: `#FF4444`
-  - Info / Telemetria: `#38BDF8`
+- **Testo Secondario & Didascalie**: `#94A9C0` (Steel Slate Gray Leggibile)
 
 ## Architettura e Asset
 ```
 /Site-ElettroImpianti/
-├── index.html                  # Landing page HTML5 semantica, SEO, Schema.org, WCAG 2.2
+├── index.html                  # Landing page essenziale: Hero pulito, 6 servizi chiave, 4 punti di forza, marchi e form rapido
 ├── contact.php                 # Backend PHP sicuro con sanitizzazione, Honeypot e Rate Limiting
 ├── robots.txt                  # Regole crawler per motori di ricerca
 ├── sitemap.xml                 # Mappa XML per indicizzazione
 ├── memory.md                   # Stato e architettura del progetto (Memoria permanente)
 ├── README.md                   # Documentazione di progetto
 ├── css/
-│   └── style.css               # Design system basato sulla palette ufficiale
+│   └── style.css               # Design system essenziale, responsive, contrasti WCAG e spaziatura ariosa
 ├── js/
-│   └── main.js                 # Logica ES6+, IntersectionObserver, demo domotica, form AJAX, cookie consent
+│   └── main.js                 # Logica snella: mobile nav, scroll sticky, validazione form & cookie consent
 ├── favicon/
 │   └── favicon.svg             # Favicon vettoriale brand
 └── assets/
-    ├── logos/                  # Loghi vettoriali SVG watermark (BTicino, Schneider, ABB, Vimar, Gewiss, Ksenia, Dahua, Hikvision)
     └── images/
-        ├── site-bg.jpg         # Sfondo fisso (circuito tecnologico elegante su pietra scura)
-        ├── hero-animated-circuit.svg # Animazione 60fps quadro elettrico, flusso trifase e telemetria
-        ├── hero-real.jpg       # Fotografia HD sala quadri industriali
-        ├── solution-casa.jpg   # Foto Soluzione Casa / Residenziale
-        ├── solution-commercial.jpg # Foto Soluzione Attività Commerciali
-        ├── solution-industria.jpg  # Foto Soluzione Industria & Stabilimenti
-        ├── card-civile.jpg     # Card Impianti Civili
-        ├── card-industriale.jpg # Card Impianti Industriali
-        ├── card-domotica.jpg   # Card Domotica Smart Home
-        ├── card-allarme.jpg    # Card Impianti di Allarme
-        ├── card-cctv.jpg       # Card Videosorveglianza CCTV
-        ├── card-automazione.jpg # Card Automazione Cancelli
-        ├── card-manutenzione.jpg # Card Manutenzione e Diagnosi
-        └── card-adeguamento.jpg # Card Adeguamento e Messa a Norma
+        └── hero-real.jpg       # Fotografia HD quadro elettrico e componenti
 ```
+
+## Sezioni della Nuova Landing Page Essenziale
+1. **Header Sticky**: Logo compatto, navigazione pulita (Servizi, Perché Noi, Marchi, Contatti), telefono rapido e CTA preventivo.
+2. **Hero Section**: Titolo d'impatto, valore chiaro in 2 righe, 2 CTA dirette (Preventivo & WhatsApp), 3 pillole di garanzia e scheda visiva HD con stat 100% a norma.
+3. **Servizi Essenziali (6 Card)**:
+   - Impianti Civili
+   - Impianti Industriali
+   - Domotica Smart Living
+   - Allarmi Antintrusione
+   - Videosorveglianza CCTV
+   - Manutenzione & Messa a Norma
+4. **Perché Sceglierci (4 Card)**:
+   - 01 Certificazioni a Norma (DM 37/08)
+   - 02 Materiali Top di Gamma
+   - 03 Chiarezza nei Costi
+   - 04 Assistenza Continua
+5. **Marchi Trattati**: Lista pulita ed elegante dei produttori leader (BTicino, Schneider, ABB, Vimar, Gewiss, Ksenia, Dahua, Hikvision).
+6. **Contatti & Form Preventivo**: Layout a 2 colonne: recapiti immediati cliccabili a sinistra, form preventivo rapido ed essenziale a destra.
+7. **Footer Minimale**: Copyright, P.IVA, link rapidi.

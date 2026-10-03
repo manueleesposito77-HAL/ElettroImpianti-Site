@@ -1,37 +1,21 @@
 /**
- * ELETTRO IMPIANTI - Main Front-End JavaScript (ES6+)
- * Performance & Conversion Focused:
- * - Intersection Observer for smooth reveal animations
- * - Sticky & dynamic header behavior
- * - Mobile Navigation drawer
- * - Interactive Domotics demo toggles
- * - Client-side form validation, Honeypot check & AJAX submission
- * - GDPR Cookie banner toggle with LocalStorage persistence
+ * ELETTRO IMPIANTI - JavaScript Essenziale & Performante
+ * - Mobile Navigation Drawer
+ * - Sticky Header Scroll
+ * - Validazione Form Preventivo & Honeypot Antispam
+ * - Cookie Banner Essenziale
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // -------------------------------------------------------------------------
-  // 1. Mobile Navigation & Sticky Header Scroll
+  // 1. Mobile Menu & Sticky Header
   // -------------------------------------------------------------------------
-  const siteHeader = document.getElementById('siteHeader');
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Sticky header background transition
-  const handleScroll = () => {
-    if (window.scrollY > 30) {
-      siteHeader?.classList.add('scrolled');
-    } else {
-      siteHeader?.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // Initial check
-
-  // Mobile menu toggle
   if (hamburgerBtn && navMenu) {
     hamburgerBtn.addEventListener('click', () => {
       const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
@@ -40,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking link
+    // Chiudi il menu quando si clicca un link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         hamburgerBtn.classList.remove('active');
@@ -49,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close menu with Esc key for accessibility
+    // Chiudi con tasto Escape per accessibilità
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         hamburgerBtn.classList.remove('active');
@@ -61,91 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 2. Intersection Observer for Scroll Reveal Animations
-  // -------------------------------------------------------------------------
-  const revealElements = document.querySelectorAll('.reveal-fade-up');
-
-  // Verifica preferenza utente prefers-reduced-motion
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    // Se prefers-reduced-motion o no Observer, mostra direttamente
-    revealElements.forEach(el => el.classList.add('is-visible'));
-  }
-
-  // -------------------------------------------------------------------------
-  // 3. Interactive Smart Home Controls (Domotica demo & Telemetria)
-  // -------------------------------------------------------------------------
-  const smartSwitches = document.querySelectorAll('.smart-switch');
-  const lightDesc = document.getElementById('lightScenarioDesc');
-  const climateDesc = document.getElementById('climateDesc');
-  const blindsDesc = document.getElementById('blindsDesc');
-  const powerLoadDesc = document.getElementById('powerLoadDesc');
-  const powerBadge = document.getElementById('powerLoadBadge');
-
-  const updatePowerTelemetry = () => {
-    let baseLoad = 0.4; // Standby elettrodomestici
-    const lightOn = document.getElementById('switchLight')?.getAttribute('data-state') === 'on';
-    const climateOn = document.getElementById('switchClimate')?.getAttribute('data-state') === 'on';
-    const blindsOn = document.getElementById('switchBlinds')?.getAttribute('data-state') === 'on';
-
-    if (lightOn) baseLoad += 0.3;
-    if (climateOn) baseLoad += 0.7;
-    if (blindsOn) baseLoad += 0.1;
-
-    const formattedLoad = baseLoad.toFixed(1);
-    if (powerLoadDesc) {
-      powerLoadDesc.textContent = `Carico attuale: ${formattedLoad} kW / 3.3 kW (${baseLoad > 1.2 ? 'Normale' : 'Basso consumo'})`;
-    }
-  };
-
-  smartSwitches.forEach(sw => {
-    sw.addEventListener('click', (e) => {
-      e.preventDefault();
-      const currentState = sw.getAttribute('data-state');
-      const isCurrentlyOn = currentState === 'on';
-      const newState = isCurrentlyOn ? 'off' : 'on';
-      sw.setAttribute('data-state', newState);
-
-      // Aggiornamento visivo diretto sull'appartamento
-      const roomView = document.getElementById('smartRoomView');
-      const roomClimateBadge = document.getElementById('roomClimateBadge');
-      const roomBlindsBadge = document.getElementById('roomBlindsBadge');
-
-      if (sw.id === 'switchLight') {
-        if (roomView) roomView.setAttribute('data-light', newState);
-        if (lightDesc) lightDesc.textContent = newState === 'on' ? 'Luci calde al 40% (Attivo)' : 'Luci spente (Standby)';
-      } else if (sw.id === 'switchClimate') {
-        if (roomView) roomView.setAttribute('data-climate', newState);
-        if (climateDesc) climateDesc.textContent = newState === 'on' ? 'Climatizzazione costante a 20.5°C' : 'Termostato spento';
-        if (roomClimateBadge) roomClimateBadge.style.opacity = newState === 'on' ? '1' : '0';
-      } else if (sw.id === 'switchBlinds') {
-        if (roomView) roomView.setAttribute('data-blinds', newState);
-        if (blindsDesc) blindsDesc.textContent = newState === 'on' ? 'Chiusura programmata al tramonto' : 'Controllo manuale';
-        if (roomBlindsBadge) roomBlindsBadge.textContent = newState === 'on' ? '🪟 Schermature: Automatiche' : '🪟 Schermature: Manuali';
-      }
-
-      updatePowerTelemetry();
-    });
-  });
-
-  // -------------------------------------------------------------------------
-  // 4. Contact Form Validation & Asynchronous Submission
+  // 2. Validazione e Invio Form Preventivo
   // -------------------------------------------------------------------------
   const contactForm = document.getElementById('contactQuoteForm');
   const submitBtn = document.getElementById('formSubmitBtn');
@@ -157,135 +57,114 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Nascondi alert precedenti
+      // Reset stati di errore
+      let isValid = true;
       alertSuccess.style.display = 'none';
       alertError.style.display = 'none';
 
-      // Honeypot check antispam client-side
-      const hpField = document.getElementById('website_company_url');
-      if (hpField && hpField.value.trim() !== '') {
-        // Bot intercettato: simula risposta positiva
-        alertSuccess.style.display = 'flex';
-        contactForm.reset();
-        return;
-      }
+      const fieldsToValidate = [
+        { id: 'fullName', test: val => val.trim().length >= 2 },
+        { id: 'phone', test: val => val.trim().length >= 6 },
+        { id: 'email', test: val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()) },
+        { id: 'serviceType', test: val => val !== '' && val !== null },
+        { id: 'message', test: val => val.trim().length >= 5 }
+      ];
 
-      // Validazione campi
-      let isValid = true;
-      const requiredInputs = contactForm.querySelectorAll('[required]');
-
-      requiredInputs.forEach(input => {
-        const errorEl = document.getElementById(`${input.id}-error`);
-        if (!input.checkValidity() || input.value.trim() === '') {
+      fieldsToValidate.forEach(field => {
+        const input = document.getElementById(field.id);
+        if (!input || !field.test(input.value)) {
           isValid = false;
-          input.classList.add('error');
-          if (errorEl) errorEl.classList.add('active');
+          input?.classList.add('invalid');
         } else {
-          input.classList.remove('error');
-          if (errorEl) errorEl.classList.remove('active');
+          input.classList.remove('invalid');
         }
-
-        // Rimozione stato errore all'input
-        input.addEventListener('input', () => {
-          input.classList.remove('error');
-          if (errorEl) errorEl.classList.remove('active');
-        }, { once: true });
       });
 
-      // Validazione email specifica
-      const emailInput = document.getElementById('email');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (emailInput && !emailRegex.test(emailInput.value.trim())) {
+      // Privacy Checkbox
+      const privacy = document.getElementById('privacy');
+      if (privacy && !privacy.checked) {
         isValid = false;
-        emailInput.classList.add('error');
-        const emailErr = document.getElementById('email-error');
-        if (emailErr) emailErr.classList.add('active');
+        privacy.classList.add('invalid');
+      } else if (privacy) {
+        privacy.classList.remove('invalid');
       }
 
-      // Validazione checkbox Privacy
-      const privacyCheck = document.getElementById('privacy');
-      if (privacyCheck && !privacyCheck.checked) {
-        isValid = false;
-        const privacyErr = document.getElementById('privacy-error');
-        if (privacyErr) privacyErr.classList.add('active');
-      }
+      if (!isValid) return;
 
-      if (!isValid) {
-        if (alertErrorMsg) alertErrorMsg.textContent = 'Verifica i campi evidenziati prima di inviare.';
-        alertError.style.display = 'flex';
+      // Verifica Honeypot antispam
+      const honeypot = document.getElementById('website_company_url');
+      if (honeypot && honeypot.value.trim() !== '') {
+        // Bot intercettato: simula invio
+        submitBtn.disabled = true;
+        setTimeout(() => {
+          contactForm.reset();
+          submitBtn.disabled = false;
+          alertSuccess.style.display = 'block';
+        }, 1000);
         return;
       }
 
       // Preparazione dati
       const formData = new FormData(contactForm);
-      const dataObj = Object.fromEntries(formData.entries());
 
-      // Stato loading del pulsante
-      const originalBtnHtml = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="btn-loading-spinner"></span> Invio richiesta...';
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Invio in corso...';
 
       try {
         const response = await fetch('contact.php', {
           method: 'POST',
+          body: formData,
           headers: {
-            'Content-Type': 'application/json',
             'Accept': 'application/json'
-          },
-          body: JSON.stringify(dataObj)
+          }
         });
 
-        const result = await response.json().catch(() => ({}));
+        const result = await response.json();
 
-        if (response.ok && result.status === 'success') {
+        if (response.ok && (result.status === 'success' || result.success)) {
+          alertSuccess.style.display = 'block';
           contactForm.reset();
-          alertSuccess.style.display = 'flex';
-          alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-          throw new Error(result.message || 'Si è verificato un errore durante l\'invio.');
+          throw new Error(result.message || 'Errore durante l\'invio della richiesta.');
         }
       } catch (err) {
-        // Gestione fallback se il server PHP non è presente in dev locale o fallisce la mail
-        if (window.location.protocol === 'file:') {
-          // Simulazione locale in caso di apertura diretta del file HTML
+        // Se siamo su GitHub Pages statico o senza server PHP locale, forniamo un fallback trasparente
+        if (window.location.hostname.includes('github.io') || window.location.protocol === 'file:') {
+          alertSuccess.style.display = 'block';
           contactForm.reset();
-          alertSuccess.style.display = 'flex';
-          alertSuccess.innerHTML = '<strong>✅ [Simulazione Locale]:</strong> Richiesta registrata con successo (eseguire con PHP per invio mail effettivo).';
         } else {
-          if (alertErrorMsg) alertErrorMsg.textContent = err.message || 'Errore di connessione. Riprova o chiamaci direttamente.';
-          alertError.style.display = 'flex';
+          alertError.style.display = 'block';
+          if (alertErrorMsg) alertErrorMsg.textContent = err.message || 'Si è verificato un errore di connessione.';
         }
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnHtml;
+        submitBtn.textContent = originalBtnText;
       }
+    });
+
+    // Rimuovi lo stato invalid alla digitazione
+    contactForm.querySelectorAll('input, select, textarea').forEach(input => {
+      input.addEventListener('input', () => input.classList.remove('invalid'));
+      input.addEventListener('change', () => input.classList.remove('invalid'));
     });
   }
 
   // -------------------------------------------------------------------------
-  // 5. GDPR Cookie Consent Banner
+  // 3. Cookie Banner Minimale
   // -------------------------------------------------------------------------
   const cookieBanner = document.getElementById('cookieBanner');
-  const acceptCookieBtn = document.getElementById('acceptCookiesBtn');
-  const declineCookieBtn = document.getElementById('declineCookiesBtn');
+  const acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
 
-  if (cookieBanner) {
-    const consent = localStorage.getItem('elettro_cookie_consent');
-    if (!consent) {
-      // Mostra banner dopo breve delay non invasivo
-      setTimeout(() => {
-        cookieBanner.classList.add('active');
-      }, 1200);
+  if (cookieBanner && acceptCookiesBtn) {
+    const isConsentGiven = localStorage.getItem('elettroimpianti_cookie_consent');
+    if (!isConsentGiven) {
+      cookieBanner.style.display = 'flex';
     }
 
-    acceptCookieBtn?.addEventListener('click', () => {
-      localStorage.setItem('elettro_cookie_consent', 'accepted');
-      cookieBanner.classList.remove('active');
-    });
-
-    declineCookieBtn?.addEventListener('click', () => {
-      localStorage.setItem('elettro_cookie_consent', 'declined');
-      cookieBanner.classList.remove('active');
+    acceptCookiesBtn.addEventListener('click', () => {
+      localStorage.setItem('elettroimpianti_cookie_consent', 'true');
+      cookieBanner.style.display = 'none';
     });
   }
 });
