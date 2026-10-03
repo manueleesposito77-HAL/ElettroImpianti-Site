@@ -15,9 +15,11 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
 
 ## Canali di Contatto
 - **ESCLUSIONE CATEGORICA**: WhatsApp è stato escluso integralmente come da specifica cliente.
-- **Canali Ufficiali**:
-  - Telefono Diretto Click-to-call: `tel:+390698234510`
-  - Email: `info@elettroimpianti-roma.it`
+- **Canali Ufficiali (Dimostrativi / Demo)**:
+  - Telefono Diretto Click-to-call: `tel:+390600000000` (`+39 06 0000 0000`)
+  - Email: `info@esempio-dimostrativo.it`
+  - Sede Legale/Operativa: `Via Esempio, 123 - 00100 Roma (RM) [Sede Dimostrativa]`
+  - P.IVA: `00000000000 (Dati Dimostrativi)` | REA: `RM-000000` | PEC: `pec@esempio-dimostrativo.it`
   - Modulo di contatto strutturato con riscontro entro 24h lavorative e autocompilazione della zona cliccando sulle aree territoriali di Roma.
 
 ## Identità Visiva e Brand Assets
