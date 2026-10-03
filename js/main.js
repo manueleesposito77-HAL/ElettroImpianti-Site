@@ -26,9 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Gestione modulo di contatto
   initContactForm();
 
-  // Gestione pillole geografiche e filtro rapido
-  initGeoPills();
-
   // Gestione modale di conformità EU AI Act (Regolamento UE 2024/1689)
   initAiActModal();
 });
@@ -227,25 +224,6 @@ function initGsapAnimations() {
     }
   );
 
-  // 9. Sezione Territorio & SEO Reveal
-  gsap.fromTo(
-    '#coverageSection .coverage-box',
-    { opacity: 0, y: 35 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      stagger: 0.15,
-      ease: 'power2.out',
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: '#coverageSection',
-        start: 'top 85%',
-        toggleActions: 'play none none none',
-        once: true,
-      },
-    }
-  );
 }
 
 /**
@@ -350,24 +328,4 @@ function initContactForm() {
   }
 }
 
-/**
- * Click su pillola territorio imposta la zona nel modulo contatti
- */
-function initGeoPills() {
-  const pills = document.querySelectorAll('.city-pill');
-  const zonaInput = document.getElementById('inputZona');
 
-  pills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      const areaName = pill.getAttribute('data-area') || pill.textContent.trim();
-      if (zonaInput) {
-        zonaInput.value = areaName;
-        const contactSection = document.getElementById('contatti');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-          zonaInput.focus();
-        }
-      }
-    });
-  });
-}

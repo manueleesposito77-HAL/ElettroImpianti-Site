@@ -56,9 +56,9 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
 5. **Sezione Servizi a 6 Card**: Icone sostituite da fotografie tematiche royalty-free ad alta risoluzione in formato 16:9 (`assets/images/services/card-[civile|industriale|ksenia|tvcc|domotica|cancelli].jpg`) con effetto zoom on hover; animazione a cascata (`stagger: 0.15s`) con `gsap.fromTo` e `immediateRender: false`; micro-glow rosso `#D71920` (opacità 15%).
 6. **Tracce Circuito SVG**: Linee vettoriali a circuito stampato animate con `stroke-dasharray` e `stroke-dashoffset` che si disegnano allo scorrimento.
 7. **Contatori Numerici**: Conteggio numerico dinamico per anni di esperienza (20+), interventi Roma (3500+), tempo arrivo urgenze (60 min) e soddisfazione (99.4%).
-8. **Partner Ksenia Security**: Box con focus sulla centrale `lares 4.0` e fotografia ad alta definizione del display touch (`assets/images/ksenia-panel.jpg`).
-9. **Copertura Territoriale Roma & Hinterland**: Pillole interattive dei quartieri e comuni provinciali con sincronizzazione diretta verso il form contatti.
-10. **Lead Form & Modale**: Validazione completa, feedback visivo di caricamento e modale di conferma invio.
+8. **Partner Ksenia Security**: Box con focus sulla centrale `lares 4.0` e fotografia ad alta definizione del display touch (`assets/images/ksenia-panel.jpg`) su sfondo scuro `#121212`.
+9. **Alternanza Cromatica Sezioni**: Copertura Territoriale rimossa su indicazione cliente; la sezione Modulo Contatti (`#contatti`) è impostata su sfondo chiaro (`bg-[#F8F9FA]`) per assicurare la perfetta alternanza visiva chiaro/scuro: Ksenia Security (Scuro) -> Contatti (Chiaro) -> Footer (Scuro).
+10. **Lead Form & Modale**: Validazione completa su form chiaro, feedback visivo di caricamento e modale di conferma invio.
 
 ## Riferimenti Ambiente & Strumenti di Sistema
 - **Web Server Locale di Sviluppo**: `python -m http.server 8080` (avviato nella root del progetto).
