@@ -45,7 +45,7 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
   - **Animazione**: `@keyframes continuousSidePulse`: ciclo continuo da 0% (`opacity: 0`) a 50% (`opacity: 1`) a 100% (`opacity: 0`), durata `5.4s ease-in-out infinite` senza pause intermedie.
 
 ## Stack Tecnologico & Animazioni GSAP + ScrollTrigger
-1. **Navbar Sticky**: Transizione fluida di background, ombra ed effetto scale down del logo ufficiale al superamento della Hero section.
+1. **Navbar Sticky**: Header spazioso (padding `py-4`), logo ufficiale ingrandito (`h-16`/`68px`) con riduzione minima a `60px` allo scroll per preservare la leggibilità e l'imponenza del brand, e transizione fluida di background/ombra.
 2. **Hero Section**: Reveal graduale temporizzato (kicker, titolo H1, testo, CTA group, trust badges) con GSAP timeline.
 3. **Video Background**: Tag `<video>` con fallback poster fotorealistica HD (`assets/images/hero-poster.jpg`), overlay a maglia geometrica tecnica al 70% per la massima leggibilità ed effetto parallax controllato da ScrollTrigger.
 4. **Striscia Certificazioni**: Rivelazione a scorrimento dei 4 badge tecnici (DM 37/08, Ksenia Certified, Norme CEI/Di.Co., Garanzia).
