@@ -138,24 +138,32 @@ function initGsapAnimations() {
     }
   );
 
-  // 5. Sezione Servizi: Animazione a cascata (stagger: 0.15s) per le 6 card
+  // 5. Sezione Servizi: Animazione a comparsa con leggero Zoom & Salita (stagger)
   const serviceCards = document.querySelectorAll('.service-card-item');
   if (serviceCards.length > 0) {
     gsap.fromTo(
       serviceCards,
-      { opacity: 0, y: 45 },
+      {
+        opacity: 0,
+        y: 50,
+        scale: 0.92,
+      },
       {
         opacity: 1,
         y: 0,
-        duration: 0.7,
-        stagger: 0.15,
-        ease: 'power3.out',
-        immediateRender: false,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: '#serviziSection',
-          start: 'top 85%',
+          start: 'top 75%',
           toggleActions: 'play none none none',
           once: true,
+          onComplete: () => {
+            // Pulisce la trasformazione inline per consentire il perfetto hover CSS
+            gsap.set(serviceCards, { clearProps: 'transform' });
+          },
         },
       }
     );
