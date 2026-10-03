@@ -15,6 +15,7 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
 - **Videosorveglianza & AI (Art. 5)**: Algoritmi ottici di bordo limitati al filtraggio volumetrico persone/veicoli anti-falso allarme, con esclusione categorica di identificazione o categorizzazione biometrica di massa non autorizzata.
 - **Tutela Dati (Art. 10 & GDPR)**: I dati non alimentano modelli di intelligenza artificiale o LLM di terze parti.
 - **Badge e Modale di Trasparenza**: Badge certificativo nel footer e modale interattivo consultabile da qualsiasi utente.
+- **Dichiarazione Trasparenza Footer (Colophon)**: "Testi e risorse grafiche di questo sito sono stati parzialmente realizzati con il supporto di strumenti di intelligenza artificiale generativa." posizionata sotto i dati legali/copyright.
 
 ## Canali di Contatto
 - **ESCLUSIONE CATEGORICA**: WhatsApp è stato escluso integralmente come da specifica cliente.
