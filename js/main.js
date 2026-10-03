@@ -138,26 +138,51 @@ function initGsapAnimations() {
     }
   );
 
-  // 5. Sezione Servizi: Animazione a comparsa differenziata per fila (la seconda fila appare solo quando visualizzata)
+  // 5. Sezione Servizi: Animazione a comparsa (singola card su cellulare, a fila su desktop/tablet)
   const serviceCards = document.querySelectorAll('.service-card-item');
   if (serviceCards.length > 0) {
     // Imposta lo stato iniziale
     gsap.set(serviceCards, { opacity: 0, y: 50, scale: 0.92 });
 
-    ScrollTrigger.batch(serviceCards, {
-      start: 'top 85%',
-      once: true,
-      onEnter: (batch) => {
-        gsap.to(batch, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.75,
-          stagger: 0.12,
-          ease: 'power2.out',
-          onComplete: () => {
-            // Pulisce le trasformazioni inline per consentire il perfetto hover CSS
-            gsap.set(batch, { clearProps: 'transform' });
+    ScrollTrigger.matchMedia({
+      // SU CELLULARE (< 768px): Ciascuna card compare singolarmente entrando nello schermo
+      '(max-width: 767px)': function () {
+        serviceCards.forEach((card) => {
+          gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.7,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 88%',
+              once: true,
+              onComplete: () => {
+                gsap.set(card, { clearProps: 'transform' });
+              },
+            },
+          });
+        });
+      },
+
+      // SU DESKTOP / TABLET (>= 768px): Entrata a fila con effetto a cascata
+      '(min-width: 768px)': function () {
+        ScrollTrigger.batch(serviceCards, {
+          start: 'top 85%',
+          once: true,
+          onEnter: (batch) => {
+            gsap.to(batch, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.75,
+              stagger: 0.12,
+              ease: 'power2.out',
+              onComplete: () => {
+                gsap.set(batch, { clearProps: 'transform' });
+              },
+            });
           },
         });
       },
