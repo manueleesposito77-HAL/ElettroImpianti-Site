@@ -21,7 +21,7 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
   - Modulo di contatto strutturato con riscontro entro 24h lavorative e autocompilazione della zona cliccando sulle aree territoriali di Roma.
 
 ## Identità Visiva e Brand Assets
-- **Immagine di Sfondo Hero**: Fotografia ufficiale ad alta risoluzione del tecnico elettricista su quadro di distribuzione industriale salvata in `assets/images/hero-bg.jpg` (con effetto parallasse GSAP ScrollTrigger e overlay a maglia tecnica per massima leggibilità).
+- **Immagine di Sfondo Hero**: Fotografia panoramica ufficiale ad alta definizione (`bg_wide.png` / `1536x1024`) del tecnico elettricista con tuta brandizzata ElettroImpianti e multimetro al quadro elettrico, salvata e ottimizzata in `assets/images/hero-bg.jpg`, `assets/images/hero-poster.jpg` e `assets/images/bg_wide.png` (con effetto parallasse GSAP ScrollTrigger e overlay a maglia tecnica).
 - **Logo Ufficiale**: Scudo protettivo bicolore (Rosso `#D71920` e Nero Carbone `#121212`), tecnico elettricista con elmetto, tester e utensili, tracce di circuito stampato integrate e fulmine dinamico.
   - Salvato in: `assets/images/logo.png`
   - Favicon ufficiale in: `favicon/favicon.png` e `favicon/favicon.svg`
