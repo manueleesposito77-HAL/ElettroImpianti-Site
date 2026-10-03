@@ -72,19 +72,7 @@ function initAiActModal() {
  * Inizializzazione di tutte le animazioni GSAP e ScrollTrigger
  */
 function initGsapAnimations() {
-  // 1. Transizione Navbar Header allo scroll
-  const siteHeader = document.getElementById('siteHeader');
-  if (siteHeader) {
-    ScrollTrigger.create({
-      trigger: '#heroSection',
-      start: 'top -60px',
-      end: 'bottom top',
-      onEnter: () => siteHeader.classList.add('scrolled'),
-      onLeaveBack: () => siteHeader.classList.remove('scrolled'),
-    });
-  }
-
-  // 2. Hero Section: Reveal Graduale Temporizzato
+  // 1. Hero Section: Reveal Graduale Temporizzato
   const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
   heroTl

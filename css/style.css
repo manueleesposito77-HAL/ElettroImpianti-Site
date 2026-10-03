@@ -171,37 +171,22 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   }
 }
 
-/* Header Sticky Dynamics */
+/* Header Static Styling (Scorre naturalmente con la pagina) */
 .main-header {
-  transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
-}
-
-.main-header.scrolled {
-  background-color: var(--color-white) !important;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
-  padding-top: 0.4rem !important;
-  padding-bottom: 0.4rem !important;
+  background-color: var(--color-white);
 }
 
 .header-logo {
-  transition: height 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.main-header.scrolled .header-logo {
-  height: 38px !important;
+.nav-text-color {
+  color: var(--color-carbon);
+  transition: color 0.2s ease;
 }
 
-.main-header.scrolled .nav-text-color {
-  color: var(--color-carbon) !important;
-}
-
-.main-header.scrolled .nav-text-color:hover {
+.nav-text-color:hover {
   color: var(--color-red) !important;
-}
-
-.main-header.scrolled .logo-icon {
-  width: 38px !important;
-  height: 38px !important;
 }
 
 .main-header.scrolled .brand-sub {

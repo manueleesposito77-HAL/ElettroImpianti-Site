@@ -6,6 +6,9 @@ Landing page moderna, iper-professionale e responsive per **ElettroImpianti**, a
 ## Regola Linguistica
 - **Lingua Esclusiva**: Comunicazione, risposte, spiegazioni, pensieri e commenti tassativamente ed esclusivamente in **lingua italiana**.
 
+## Regola Operativa Fondamentale: Nessuna Iniziativa Autonoma
+- **Chiedere Sempre Prima di Applicare**: NON prendere mai iniziative autonome né aggiungere funzionalità o modifiche di testa propria. Prima di implementare nuove funzioni, variazioni o modifiche non esplicitamente richieste, DEVI sempre descrivere la proposta e chiedere espressamente conferma all'utente. Limitarsi rigorosamente a eseguire quanto richiesto.
+
 ## Conformità Normativa & EU AI Act (Regolamento UE 2024/1689)
 - **Supervisione Umana (Art. 14 Human-in-the-loop)**: Garanzia che ogni diagnosi, preventivo e contatto è elaborato da personale peritale umano abilitato.
 - **Trasparenza Canali (Art. 50)**: Nessun chatbot o avatar sintetico ingannevole.
